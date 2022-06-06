@@ -5,16 +5,8 @@ const uuid4 = require('uuid4')
 const FormData = require('form-data');
 const socketio = require('socket.io')(http)
 const axios = require('axios').default;
-
-
 var Storage = require('node-storage');
 var store = new Storage('path/to/file');
-
-
-// process.env.USER_ID; // "239482"
-// process.env.USER_KEY; // "foobar"
-// process.env.NODE_ENV; // "development"
-
 
 app.get('/', (req, res) => {
     res.send("Node Server is running. Yay!!")
@@ -50,7 +42,7 @@ socketio.on('connect', socket => {
 
     axios({
       method  : 'post',
-      url     : 'https://hafiz.work/api/mobile/open-chat',
+      url     :  process.env.OPEN_CHAT,
       headers : form.getHeaders(),
       data    : form
     })
@@ -81,7 +73,7 @@ socketio.on('connect', socket => {
 
         axios({
           method  : 'post',
-          url     : 'https://hafiz.work/api/mobile/submit-chat',
+          url     : process.env.SUBMIT_CHAT,
           headers : form.getHeaders(),
           data    : form
         })
@@ -117,7 +109,7 @@ socketio.on('connect', socket => {
 });
 
 
-// http.listen(process.env.PORT)
-http.listen(3000)
+http.listen(process.env.PORT)
+// http.listen(3000)
 
 

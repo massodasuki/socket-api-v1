@@ -109,6 +109,7 @@ socketio.on('connect', socket => {
     });
 
     socket.on('scroll_max', (room, callback) => {
+          var roomName = room.room;
           // var roomA = ''+room.from +'-'+ room.to+'';
           // var roomB = ''+room.to +'-'+ room.from+'';
 
@@ -126,7 +127,7 @@ socketio.on('connect', socket => {
           // if (!room.to) {
           //     room.to
           // }
-          // console.log(room);
+           console.log(room);
 
           const form = new FormData();
           form.append('my_id', room.from);
@@ -141,15 +142,18 @@ socketio.on('connect', socket => {
           })
           .then((resolve) => {
             conversation = resolve.data;
-            // console.log(conversation);
+            console.log(conversation);
             conversation.room = roomName;
             conversation.people = people;
 
-            // console.log(roomName);
-            socketio.to(roomName).emit('room', conversation);      
-          })
-          .catch((error) => console.log(error));
+            console.log(roomName);
+          socketio.to(roomName).emit('room', conversation);      
+        })
+        .catch((error) => console.log(error));
 
+      })
+      
+            
     
 });
 

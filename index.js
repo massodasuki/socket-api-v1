@@ -126,6 +126,7 @@ socketio.on('connect', socket => {
           // if (!room.to) {
           //     room.to
           // }
+          // console.log(room);
 
           const form = new FormData();
           form.append('my_id', room.from);

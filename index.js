@@ -60,34 +60,67 @@ socketio.on('connect', socket => {
 
   });
 
-    socket.on('send_message', (newMessage, callback) => {
-        var roomName = newMessage.room;
+  socket.on('send_message', (newMessage, callback) => {
+      var roomName = newMessage.room;
+
+      const form = new FormData();
+      // console.log(newMessage);
+      form.append('from', newMessage.from);
+      form.append('to', newMessage.to);
+      form.append('msg', newMessage.msg);
+      form.append('media1',"");
+      form.append('media_type',"");
+
+      axios({
+        method  : 'post',
+        url     : process.env.SUBMIT_CHAT,
+        headers : form.getHeaders(),
+        data    : form
+      })
+      .then((resolve) => {
+        console.log(resolve.data);
 
         const form = new FormData();
-        // console.log(newMessage);
-        form.append('from', newMessage.from);
-        form.append('to', newMessage.to);
-        form.append('msg', newMessage.msg);
-        form.append('media1',"");
-        form.append('media_type',"");
+        form.append('my_id', newMessage.from);
+        form.append('to_id', newMessage.to);
+        form.append('offset', 0);
 
         axios({
           method  : 'post',
-          url     : process.env.SUBMIT_CHAT,
+          url     : 'https://hafiz.work/api/mobile/open-chat',
           headers : form.getHeaders(),
           data    : form
         })
         .then((resolve) => {
-          console.log(resolve.data);
+          conversation = resolve.data;
+          // console.log(conversation);
+          conversation.room = roomName;
+          conversation.people = people;
+
+          // console.log(roomName);
+          socketio.to(roomName).emit('room', conversation);      
+        })
+        .catch((error) => console.log(error));
+      })
+      .catch((error) => console.log(error));
+            
+    });
+
+    socket.on('scroll_max', (room, callback) => {
+          var roomA = ''+room.from +'-'+ room.to+'';
+          var roomB = ''+room.to +'-'+ room.from+'';
+
+          // store.put(roomA, 'world');
+          var roomName = store.get(roomA) ? store.get(roomA) : store.get(roomB);
 
           const form = new FormData();
-          form.append('my_id', newMessage.from);
-          form.append('to_id', newMessage.to);
-          form.append('offset', 0);
+          form.append('my_id', room.from);
+          form.append('to_id', room.to);
+          form.append('offset', room.offset);
 
           axios({
             method  : 'post',
-            url     : 'https://hafiz.work/api/mobile/open-chat',
+            url     :  process.env.OPEN_CHAT,
             headers : form.getHeaders(),
             data    : form
           })
@@ -101,10 +134,7 @@ socketio.on('connect', socket => {
             socketio.to(roomName).emit('room', conversation);      
           })
           .catch((error) => console.log(error));
-        })
-        .catch((error) => console.log(error));
-              
-      });
+
     
 });
 

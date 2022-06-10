@@ -31,6 +31,8 @@ socketio.on('connect', socket => {
       var roomUuid = uuid4();
       store.put(roomA, roomUuid);
       store.put(roomB, roomUuid);
+      store.put(roomUuid, roomA);
+      store.put(roomUuid, roomB);
       roomName = roomUuid;
       socket.join(roomName);
     }
@@ -107,11 +109,23 @@ socketio.on('connect', socket => {
     });
 
     socket.on('scroll_max', (room, callback) => {
-          var roomA = ''+room.from +'-'+ room.to+'';
-          var roomB = ''+room.to +'-'+ room.from+'';
+          // var roomA = ''+room.from +'-'+ room.to+'';
+          // var roomB = ''+room.to +'-'+ room.from+'';
 
           // store.put(roomA, 'world');
-          var roomName = store.get(roomA) ? store.get(roomA) : store.get(roomB);
+          // var roomName = store.get(roomA) ? store.get(roomA) : store.get(roomB);
+
+          // var people = store.get(roomName);
+          // var roomName = room.roomName;
+
+          // if (!room.from) {
+          //   var people = store.get(roomName);
+          //     room.from
+          // }
+
+          // if (!room.to) {
+          //     room.to
+          // }
 
           const form = new FormData();
           form.append('my_id', room.from);

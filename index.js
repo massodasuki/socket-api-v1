@@ -70,8 +70,8 @@ socketio.on('connect', socket => {
       form.append('from', newMessage.from);
       form.append('to', newMessage.to);
       form.append('msg', newMessage.msg);
-      form.append('media1',"");
-      form.append('media_type',"");
+      form.append('media1',newMessage.media1);
+      form.append('media_type',newMessage.media_type);
 
       axios({
         method  : 'post',
@@ -110,24 +110,8 @@ socketio.on('connect', socket => {
 
     socket.on('scroll_max', (room, callback) => {
           var roomName = room.room;
-          // var roomA = ''+room.from +'-'+ room.to+'';
-          // var roomB = ''+room.to +'-'+ room.from+'';
-
-          // store.put(roomA, 'world');
-          // var roomName = store.get(roomA) ? store.get(roomA) : store.get(roomB);
-
-          // var people = store.get(roomName);
-          // var roomName = room.roomName;
-
-          // if (!room.from) {
-          //   var people = store.get(roomName);
-          //     room.from
-          // }
-
-          // if (!room.to) {
-          //     room.to
-          // }
-           console.log(room);
+          
+          // console.log(room);
 
           const form = new FormData();
           form.append('my_id', room.from);

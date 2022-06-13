@@ -89,7 +89,7 @@ socketio.on('connect', socket => {
 
         axios({
           method  : 'post',
-          url     : 'https://hafiz.work/api/mobile/open-chat',
+          url     : process.env.OPEN_CHAT,
           headers : form.getHeaders(),
           data    : form
         })
@@ -126,7 +126,7 @@ socketio.on('connect', socket => {
           })
           .then((resolve) => {
             conversation = resolve.data;
-            console.log(conversation);
+            // console.log(conversation);
             conversation.room = roomName;
             conversation.people = people;
 
@@ -136,8 +136,112 @@ socketio.on('connect', socket => {
         .catch((error) => console.log(error));
 
       })
-      
+
+
+    // Group Chat
+
+    socket.on('join_broadcast', (room) => {
+    // console.log(room);
+    var broadcastId = room.broadcast_id;
+
+    socket.join(broadcastId);
+    
+
+    const form = new FormData();
+    form.append('broadcast_id', room.broadcast_id);
+    form.append('my_id', room.from);
+    form.append('offset', 0);
+
+    axios({
+      method  : 'post',
+      url     :  process.env.BROADCAST_OPEN_CHAT,
+      headers : form.getHeaders(),
+      data    : form
+    })
+    .then((resolve) => {
+      conversation = resolve.data;
+      // console.log(conversation);
+      // console.log(roomName);
+      conversation.broadcastId = broadcastId;
+      socketio.to(broadcastId).emit('room_broadcast', conversation);      
+    })
+    .catch((error) => console.log(error));
+
+
+  });
+
+  socket.on('send_message_broadcast', (newMessage, callback) => {
+      var broadcastId = newMessage.broadcastId;
+
+      const form = new FormData();
+      // console.log(newMessage);
+      form.append('broadcast_id', newMessage.broadcast_id);
+      form.append('from', newMessage.from);
+      form.append('msg', newMessage.msg);
+      form.append('media1',newMessage.media1);
+      form.append('media_type',newMessage.media_type);
+
+      axios({
+        method  : 'post',
+        url     : process.env.BROADCAST_SUBMIT_CHAT,
+        headers : form.getHeaders(),
+        data    : form
+      })
+      .then((resolve) => {
+        console.log(resolve.data);
+
+        const form = new FormData();
+        form.append('broadcast_id', newMessage.broadcast_id);
+        form.append('my_id', newMessage.from);
+        form.append('offset', 0);
+
+        axios({
+          method  : 'post',
+          url     : process.env.BROADCAST_OPEN_CHAT,
+          headers : form.getHeaders(),
+          data    : form
+        })
+        .then((resolve) => {
+          conversation = resolve.data;
+          // console.log(conversation);
+          conversation.broadcastId = broadcastId;
+
+          // console.log(broadcastId);
+          socketio.to(broadcastId).emit('room_broadcast', conversation);      
+        })
+        .catch((error) => console.log(error));
+      })
+      .catch((error) => console.log(error));
             
+    });
+
+    socket.on('scroll_max_broadcast', (room, callback) => {
+          var broadcastId = room.broadcast_id;
+          
+          // console.log(room);
+
+          const form = new FormData();
+          form.append('broadcast_id', room.broadcast_id);
+          form.append('my_id', room.from);
+          form.append('offset', room.offset);
+
+          axios({
+            method  : 'post',
+            url     :  process.env.BROADCAST_OPEN_CHAT,
+            headers : form.getHeaders(),
+            data    : form
+          })
+          .then((resolve) => {
+            conversation = resolve.data;
+            // console.log(conversation);
+            conversation.broadcastId = broadcastId;
+
+            //console.log(broadcastId);
+          socketio.to(broadcastId).emit('room_broadcast', conversation);      
+        })
+        .catch((error) => console.log(error));
+
+      })
     
 });
 

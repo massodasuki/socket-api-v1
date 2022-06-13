@@ -163,7 +163,7 @@ socketio.on('connect', socket => {
       // console.log(conversation);
       // console.log(roomName);
       conversation.broadcastId = broadcastId;
-      socketio.to(broadcastId).emit('room_broadcast', conversation);      
+      socketio.to(broadcastId).emit('broadcast', conversation);      
     })
     .catch((error) => console.log(error));
 
@@ -207,7 +207,7 @@ socketio.on('connect', socket => {
           conversation.broadcastId = broadcastId;
 
           // console.log(broadcastId);
-          socketio.to(broadcastId).emit('room_broadcast', conversation);      
+          socketio.to(broadcastId).emit('broadcast', conversation);      
         })
         .catch((error) => console.log(error));
       })
@@ -237,7 +237,7 @@ socketio.on('connect', socket => {
             conversation.broadcastId = broadcastId;
 
             //console.log(broadcastId);
-          socketio.to(broadcastId).emit('room_broadcast', conversation);      
+          socketio.to(broadcastId).emit('broadcast', conversation);      
         })
         .catch((error) => console.log(error));
 

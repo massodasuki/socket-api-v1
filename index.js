@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.send("Node Server is running. Yay!!")
 })
 
-var listOfSocket = [];
+var listOfSocket = [{user:'null', socketId:'null' }];
 socketio.on('connect', socket => {
     var roomName, people;
     
@@ -122,9 +122,10 @@ socketio.on('connect', socket => {
           // socketio.to(socketId).emit('room', conversation);
           // socketio.in(roomName).emit('room', conversation);
 
-          var socketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
-          socketio.to(socketId).emit('room', conversation);
-          console.log('Message send to : ', socketId);
+          var toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
+          var fromSocketId = listOfSocket.find(u => u.user === newMessage.from).socketId;
+          socketio.to(toSocketId).to(fromSocketId).emit('room', conversation);
+          console.log('Message send to : ', toSocketId, ' and ', fromSocketId);
         })
         .catch((error) => console.log(error));
       })

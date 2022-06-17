@@ -12,13 +12,25 @@ app.get('/', (req, res) => {
     res.send("Node Server is running. Yay!!")
 })
 
-
+var listOfSocket = [];
 socketio.on('connect', socket => {
     var roomName, people;
+    
     socket.on('join', (room) => {
-    console.log(room);
+    // console.log(room);
     var roomA = ''+room.from +'-'+ room.to+'';
     var roomB = ''+room.to +'-'+ room.from+'';
+    
+    // console.log( room.from + ' : ' + socket.id);
+    const index = listOfSocket.findIndex((u) => u.user === room.from)
+    // console.log(index);
+    if (index == -1) {
+      var object = { user : room.from, socketId : socket.id };
+      listOfSocket.push(object);
+    } else {
+      listOfSocket[index] = { user: room.from, socketId: socket.id}
+    }
+    console.log(listOfSocket);
 
     // store.put(roomA, 'world');
     var roomName = store.get(roomA) ? store.get(roomA) : store.get(roomB);
@@ -55,7 +67,10 @@ socketio.on('connect', socket => {
       conversation.people = people;
 
       // console.log(roomName);
-      socketio.to(roomName).emit('room', conversation);      
+      // socketio.in(roomName).emit('room', conversation);
+      // socketio.to(roomName).emit('room', conversation);
+      var socketId = listOfSocket.find(u => u.user === room.from).socketId;
+      socketio.to(socketId).emit('room', conversation);
     })
     .catch((error) => console.log(error));
 
@@ -99,19 +114,25 @@ socketio.on('connect', socket => {
           conversation.room = roomName;
           conversation.people = people;
 
+          var socketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
+          // console.log(socketId);
+
           // console.log(roomName);
-          socketio.to(roomName).emit('room', conversation);      
+          // socketio.to(socketId).emit('room', conversation);
+          // socketio.in(roomName).emit('room', conversation);
+
+          var socketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
+          socketio.to(socketId).emit('room', conversation);
         })
         .catch((error) => console.log(error));
       })
       .catch((error) => console.log(error));
-            
     });
 
     socket.on('scroll_max', (room, callback) => {
           var roomName = room.room;
           
-          // console.log(room);
+          // console.log(socket.id);
 
           const form = new FormData();
           form.append('my_id', room.from);
@@ -130,8 +151,9 @@ socketio.on('connect', socket => {
             conversation.room = roomName;
             conversation.people = people;
 
-            console.log(roomName);
-          socketio.to(roomName).emit('room', conversation);      
+          // console.log(roomName);
+          var socketId = listOfSocket.find(u => u.user === room.from).socketId;
+          socketio.to(socketId).emit('room', conversation);      
         })
         .catch((error) => console.log(error));
 
@@ -146,7 +168,6 @@ socketio.on('connect', socket => {
 
     socket.join(broadcastId);
     
-
     const form = new FormData();
     form.append('broadcast_id', room.broadcast_id);
     form.append('my_id', room.from);
@@ -163,7 +184,9 @@ socketio.on('connect', socket => {
       // console.log(conversation);
       // console.log(roomName);
       conversation.broadcastId = broadcastId;
-      socketio.to(broadcastId).emit('broadcast', conversation);      
+      // socketio.to(broadcastId).emit('broadcast', conversation);
+      var socketId = listOfSocket.find(u => u.user === room.from).socketId;
+      socketio.to(socketId).emit('broadcast', conversation);      
     })
     .catch((error) => console.log(error));
 
@@ -207,7 +230,9 @@ socketio.on('connect', socket => {
           conversation.broadcastId = broadcastId;
 
           // console.log(broadcastId);
-          socketio.to(broadcastId).emit('broadcast', conversation);      
+          // socketio.in(broadcastId).emit('broadcast', conversation);
+          var socketId = listOfSocket.find(u => u.user === room.from).socketId;
+          socketio.to(socketId).emit('broadcast', conversation);      
         })
         .catch((error) => console.log(error));
       })
@@ -237,7 +262,9 @@ socketio.on('connect', socket => {
             conversation.broadcastId = broadcastId;
 
             //console.log(broadcastId);
-          socketio.to(broadcastId).emit('broadcast', conversation);      
+          // socketio.to(broadcastId).emit('broadcast', conversation);
+          var socketId = listOfSocket.find(u => u.user === room.from).socketId;
+          socketio.to(socketId).emit('broadcast', conversation);    
         })
         .catch((error) => console.log(error));
 

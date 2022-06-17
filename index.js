@@ -71,7 +71,7 @@ socketio.on('connect', socket => {
       // socketio.to(roomName).emit('room', conversation);
       var socketId = listOfSocket.find(u => u.user === room.from).socketId;
       socketio.to(socketId).emit('room', conversation);
-       console.log('Load all message for :' socketId);
+       console.log('Load all message for : ', socketId);
     })
     .catch((error) => console.log(error));
 
@@ -124,7 +124,7 @@ socketio.on('connect', socket => {
 
           var socketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
           socketio.to(socketId).emit('room', conversation);
-          console.log('Message send to :' socketId);
+          console.log('Message send to : ', socketId);
         })
         .catch((error) => console.log(error));
       })
@@ -155,7 +155,8 @@ socketio.on('connect', socket => {
 
           // console.log(roomName);
           var socketId = listOfSocket.find(u => u.user === room.from).socketId;
-          socketio.to(socketId).emit('room', conversation);      
+          socketio.to(socketId).emit('room', conversation);
+          console.log('Scrolling by : ', socketId);    
         })
         .catch((error) => console.log(error));
 

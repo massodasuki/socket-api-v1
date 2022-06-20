@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
 })
 
 
-
 var listOfSocket = [{user:'null', socketId:'null' }];
 socketio.on('connect', socket => {
   
@@ -81,29 +80,29 @@ socketio.on('connect', socket => {
   });
 
   //Create an sendMessageEventHandler:
-  var sendMessageEventHandler = function (from, to, roomName) {
-    console.log('reloadAllChat!');
-    const form = new FormData();
-    form.append('my_id', from);
-    form.append('to_id',to);
-    form.append('offset', 0);
+  // var sendMessageEventHandler = function (from, to, roomName) {
+  //   console.log('reloadAllChat!');
+  //   const form = new FormData();
+  //   form.append('my_id', from);
+  //   form.append('to_id',to);
+  //   form.append('offset', 0);
 
-    axios({
-      method  : 'post',
-      url     : process.env.OPEN_CHAT,
-      headers : form.getHeaders(),
-      data    : form
-    })
-    .then((resolve) => {
-      conversation = resolve.data;
-      conversation.room = roomName;
-      var toSocketId = listOfSocket.find(u => u.user === to).socketId;
-      var fromSocketId = listOfSocket.find(u => u.user === from).socketId;
-      socketio.to(toSocketId).to(fromSocketId).emit('room', conversation);
-      console.log('Message send to : ', toSocketId, ' and ', fromSocketId);
-    })
-    .catch((error) => console.log('List all', error));
-  }
+  //   axios({
+  //     method  : 'post',
+  //     url     : process.env.OPEN_CHAT,
+  //     headers : form.getHeaders(),
+  //     data    : form
+  //   })
+  //   .then((resolve) => {
+  //     conversation = resolve.data;
+  //     conversation.room = roomName;
+  //     var toSocketId = listOfSocket.find(u => u.user === to).socketId;
+  //     var fromSocketId = listOfSocket.find(u => u.user === from).socketId;
+  //     socketio.to(toSocketId).to(fromSocketId).emit('room', conversation);
+  //     console.log('Message send to : ', toSocketId, ' and ', fromSocketId);
+  //   })
+  //   .catch((error) => console.log('List all', error));
+  // }
 
   socket.on('send_message', (newMessage) => {
       var roomName = newMessage.room;
@@ -123,11 +122,13 @@ socketio.on('connect', socket => {
         data    : form
       })
       .then((resolve) => {
-        //console.log(resolve.data)
-        //Assign the event handler to an event:
-        eventEmitter.on('reloadAllChat', sendMessageEventHandler);
-        //Fire the 'reloadAllChat' event:
-        eventEmitter.emit('reloadAllChat', newMessage.from, newMessage.to, roomName);
+        console.log(resolve.data)
+        var conversation = resolve.data;
+        conversation.room = roomName;
+        
+        var socketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
+        socketio.to(socketId).emit('receive_message', conversation);
+        
       })
       .catch((error) => console.log('Send Message', error));
     });

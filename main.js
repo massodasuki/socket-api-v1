@@ -7,15 +7,18 @@ const socketio = require('socket.io')(http)
 const axios = require('axios').default;
 var Storage = require('node-storage');
 var store = new Storage('path/to/file');
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
 
 app.get('/', (req, res) => {
     res.send("Node Server is running. Yay!!")
 })
 
+
+
 var listOfSocket = [{user:'null', socketId:'null' }];
 socketio.on('connect', socket => {
-    var roomName, people;
-    
+  
     socket.on('join', (room) => {
     // console.log(room);
     var roomA = ''+room.from +'-'+ room.to+'';
@@ -64,7 +67,6 @@ socketio.on('connect', socket => {
       conversation = resolve.data;
       // console.log(conversation);
       conversation.room = roomName;
-      conversation.people = people;
 
       // console.log(roomName);
       // socketio.in(roomName).emit('room', conversation);
@@ -78,7 +80,32 @@ socketio.on('connect', socket => {
 
   });
 
-  socket.on('send_message', (newMessage, callback) => {
+  //Create an sendMessageEventHandler:
+  var sendMessageEventHandler = function (from, to, roomName) {
+    console.log('reloadAllChat!');
+    const form = new FormData();
+    form.append('my_id', from);
+    form.append('to_id',to);
+    form.append('offset', 0);
+
+    axios({
+      method  : 'post',
+      url     : process.env.OPEN_CHAT,
+      headers : form.getHeaders(),
+      data    : form
+    })
+    .then((resolve) => {
+      conversation = resolve.data;
+      conversation.room = roomName;
+      var toSocketId = listOfSocket.find(u => u.user === to).socketId;
+      var fromSocketId = listOfSocket.find(u => u.user === from).socketId;
+      socketio.to(toSocketId).to(fromSocketId).emit('room', conversation);
+      console.log('Message send to : ', toSocketId, ' and ', fromSocketId);
+    })
+    .catch((error) => console.log('List all', error));
+  }
+
+  socket.on('send_message', (newMessage) => {
       var roomName = newMessage.room;
 
       const form = new FormData();
@@ -96,43 +123,16 @@ socketio.on('connect', socket => {
         data    : form
       })
       .then((resolve) => {
-        // console.log(resolve.data);
-
-        const form = new FormData();
-        form.append('my_id', newMessage.from);
-        form.append('to_id', newMessage.to);
-        form.append('offset', 0);
-
-        axios({
-          method  : 'post',
-          url     : process.env.OPEN_CHAT,
-          headers : form.getHeaders(),
-          data    : form
-        })
-        .then((resolve) => {
-          conversation = resolve.data;
-          // console.log(conversation);
-          conversation.room = roomName;
-          conversation.people = people;
-
-          var socketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
-          // console.log(socketId);
-
-          // console.log(roomName);
-          // socketio.to(socketId).emit('room', conversation);
-          // socketio.in(roomName).emit('room', conversation);
-
-          var toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
-          var fromSocketId = listOfSocket.find(u => u.user === newMessage.from).socketId;
-          socketio.to(toSocketId).to(fromSocketId).emit('room', conversation);
-          console.log('Message send to : ', toSocketId, ' and ', fromSocketId);
-        })
-        .catch((error) => console.log('List all', error));
+        //console.log(resolve.data)
+        //Assign the event handler to an event:
+        eventEmitter.on('reloadAllChat', sendMessageEventHandler);
+        //Fire the 'reloadAllChat' event:
+        eventEmitter.emit('reloadAllChat', newMessage.from, newMessage.to, roomName);
       })
       .catch((error) => console.log('Send Message', error));
     });
 
-    socket.on('scroll_max', (room, callback) => {
+    socket.on('scroll_max', (room) => {
           var roomName = room.room;
           
           // console.log(socket.id);
@@ -152,7 +152,6 @@ socketio.on('connect', socket => {
             conversation = resolve.data;
             // console.log(conversation);
             conversation.room = roomName;
-            conversation.people = people;
 
           // console.log(roomName);
           var socketId = listOfSocket.find(u => u.user === room.from).socketId;
@@ -160,7 +159,6 @@ socketio.on('connect', socket => {
           console.log('Scrolling by : ', socketId);    
         })
         .catch((error) => console.log(error));
-
       })
 
 
@@ -194,10 +192,9 @@ socketio.on('connect', socket => {
     })
     .catch((error) => console.log(error));
 
-
   });
 
-  socket.on('send_message_broadcast', (newMessage, callback) => {
+  socket.on('send_message_broadcast', (newMessage) => {
       var broadcastId = newMessage.broadcastId;
 
       const form = new FormData();
@@ -234,9 +231,9 @@ socketio.on('connect', socket => {
           conversation.broadcastId = broadcastId;
 
           // console.log(broadcastId);
-          // socketio.in(broadcastId).emit('broadcast', conversation);
-          var socketId = listOfSocket.find(u => u.user === room.from).socketId;
-          socketio.to(socketId).emit('broadcast', conversation);      
+          socketio.in(broadcastId).emit('broadcast', conversation);
+          // var socketId = listOfSocket.find(u => u.user === room.from).socketId;
+          // socketio.to(socketId).emit('broadcast', conversation);      
         })
         .catch((error) => console.log(error));
       })
@@ -244,7 +241,7 @@ socketio.on('connect', socket => {
             
     });
 
-    socket.on('scroll_max_broadcast', (room, callback) => {
+    socket.on('scroll_max_broadcast', (room) => {
           var broadcastId = room.broadcast_id;
           
           // console.log(room);
@@ -266,16 +263,15 @@ socketio.on('connect', socket => {
             conversation.broadcastId = broadcastId;
 
             //console.log(broadcastId);
-          // socketio.to(broadcastId).emit('broadcast', conversation);
-          var socketId = listOfSocket.find(u => u.user === room.from).socketId;
-          socketio.to(socketId).emit('broadcast', conversation);    
+            // socketio.to(broadcastId).emit('broadcast', conversation);
+            var socketId = listOfSocket.find(u => u.user === room.from).socketId;
+            socketio.to(socketId).emit('broadcast', conversation);    
         })
         .catch((error) => console.log(error));
 
       })
     
 });
-
 
 http.listen(process.env.PORT)
 // http.listen(3000)

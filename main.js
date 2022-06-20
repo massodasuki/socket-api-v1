@@ -125,9 +125,10 @@ socketio.on('connect', socket => {
         console.log(resolve.data)
         var conversation = resolve.data;
         conversation.room = roomName;
-        
-        var socketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
-        socketio.to(socketId).emit('receive_message', conversation);
+
+        var toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
+        var fromSocketId = listOfSocket.find(u => u.user === newMessage.from).socketId;
+        socketio.to(toSocketId).to(fromSocketId).emit('receive_message', conversation);
         
       })
       .catch((error) => console.log('Send Message', error));

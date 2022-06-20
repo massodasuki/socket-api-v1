@@ -126,7 +126,13 @@ socketio.on('connect', socket => {
         var conversation = resolve.data;
         conversation.room = roomName;
 
-        var toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
+        var toSocketId = listOfSocket.find(u => u.user === newMessage.to);
+        if (toSocketId) {
+          toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
+        } else {
+          toSocketId = '';
+        }
+
         var fromSocketId = listOfSocket.find(u => u.user === newMessage.from).socketId;
         socketio.to(toSocketId).to(fromSocketId).emit('receive_message', conversation);
         

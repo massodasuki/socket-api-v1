@@ -5,10 +5,10 @@ const uuid4 = require('uuid4')
 const FormData = require('form-data');
 const socketio = require('socket.io')(http)
 const axios = require('axios').default;
-var Storage = require('node-storage');
-var store = new Storage('path/to/file');
-var events = require('events');
-var eventEmitter = new events.EventEmitter();
+const Storage = require('node-storage');
+const store = new Storage('path/to/file');
+// const events = require('events');
+// const eventEmitter = new events.EventEmitter();
 
 app.get('/', (req, res) => {
     res.send("Node Server is running. Yay!!")

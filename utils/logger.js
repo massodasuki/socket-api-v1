@@ -18,6 +18,7 @@
     new transports.File({ filename: 'log/info.log', level: 'info' }),
     new transports.File({ filename: 'log/combined.log' }),
   ],
+   exitOnError: false,
 });
  
  const errorLogger = createLogger({
@@ -32,6 +33,7 @@
     new transports.File({ filename: 'log/error.log', level: 'error' }),
     new transports.File({ filename: 'log/combined.log' }),
   ],
+   exitOnError: false,
 });
  
  module.exports = {

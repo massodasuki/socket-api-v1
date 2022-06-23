@@ -1,0 +1,63 @@
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-23T19:44:01.305Z'
+}
+{
+  message: 'Load all message for : uCYVS5vuMIQIb9v-AAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-23T19:44:01.517Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-23T19:45:17.887Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-23T19:45:17.890Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-23T19:45:21.515Z'
+}
+{
+  message: 'Load all message for : rB-N6Z21n66hZ-LuAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-23T19:45:21.591Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-23T19:45:30.912Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-23T19:45:30.914Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-23T19:45:36.196Z'
+}
+{
+  message: 'Load all message for : Tk0P6C4-5N4mg2uLAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-23T19:45:36.290Z'
+}
+{"level":"error","message":"There was an uncaught exception:  salah is not defined","stack":"ReferenceError: salah is not defined\n    at Socket.<anonymous> (C:\\Users\\massolihen.dasuki\\Documents\\RND\\socket-api-v1\\main.js:27:21)\n    at Socket.emit (events.js:315:20)\n    at C:\\Users\\massolihen.dasuki\\Documents\\RND\\socket-api-v1\\node_modules\\socket.io\\lib\\socket.js:528:12\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)"}
+{"level":"error","message":"There was an uncaught exception:  salah is not defined","stack":"ReferenceError: salah is not defined\n    at Socket.<anonymous> (C:\\Users\\massolihen.dasuki\\Documents\\RND\\socket-api-v1\\main.js:27:21)\n    at Socket.emit (events.js:315:20)\n    at C:\\Users\\massolihen.dasuki\\Documents\\RND\\socket-api-v1\\node_modules\\socket.io\\lib\\socket.js:528:12\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)"}
+{"level":"error","message":"There was an uncaught exception:  salah is not defined","stack":"ReferenceError: salah is not defined\n    at Socket.<anonymous> (C:\\Users\\massolihen.dasuki\\Documents\\RND\\socket-api-v1\\main.js:27:21)\n    at Socket.emit (events.js:315:20)\n    at C:\\Users\\massolihen.dasuki\\Documents\\RND\\socket-api-v1\\node_modules\\socket.io\\lib\\socket.js:528:12\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)"}

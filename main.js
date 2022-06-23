@@ -315,12 +315,21 @@ socketio.on('connect', socket => {
 
 });
 
-http.listen(process.env.PORT)
-// http.listen(3000)
+const winston = require('winston');
+const logger = winston.createLogger({
+  exceptionHandlers: [
+    new winston.transports.File({ filename: 'log/exceptions.log' })
+  ],
+  exitOnError: false,
+});
 
 process.on('uncaughtException', err => {
-    console.log('Error happen')
-    console.error(err && err.stack)
-    errorlog.error(`Error send_message_broadcast axios BROADCAST_SUBMIT_CHAT : ${err} and ${err.stack}` );
-    console.log('But I am still alive!')
+    logger.error('There was an uncaught exception: ', err);
+    console.error(err && err.stack);
+    console.log('Continue Listening')
+    //logger.on('finish', () => process.exit());
+    logger.end();
 });
+
+http.listen(process.env.PORT)
+// http.listen(3000)

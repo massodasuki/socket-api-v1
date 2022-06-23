@@ -278,10 +278,33 @@ socketio.on('connect', socket => {
         .catch((error) => console.log(error));
 
       })
+
+      socket.on("disconnecting", () => {
+        var userId = listOfSocket.find(u => u.socketId === socket.id);
+
+        if (userId) {
+          var userId = listOfSocket.find(u => u.socketId === socket.id).user;
+          console.log('disconnecting '+ userId);
+        }
+        
+      });
+
+      socket.on("disconnect", () => {
+        var userId = listOfSocket.find(u => u.socketId === socket.id);
+
+        if (userId) {
+          var userId = listOfSocket.find(u => u.socketId === socket.id).user;
+          console.log('disconnect '+ userId);
+        }
+      });
     
 });
 
 http.listen(process.env.PORT)
 // http.listen(3000)
 
-
+process.on('uncaughtException', err => {
+  console.log('Error happen')
+  console.error(err && err.stack)
+  console.log('But I am still alive!')
+});

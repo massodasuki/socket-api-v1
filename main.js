@@ -172,123 +172,103 @@ socketio.on('connect', socket => {
 
     // Group Chat
 
-    socket.on('join_broadcast', (room) => {
-        // console.log(room);
-        var broadcastId = room.broadcast_id;
+    socket.on('join_group', (room) => {
+        console.log(room);
+        var roomName = room.room;
 
-        socket.join(broadcastId);
+        socket.join(roomName);
+        console.log(roomName);
 
         const form = new FormData();
-        form.append('broadcast_id', room.broadcast_id);
-        form.append('my_id', room.from);
+        form.append('room', roomName);
         form.append('offset', 0);
 
         axios({
                 method: 'post',
-                url: process.env.BROADCAST_OPEN_CHAT,
+                url: process.env.GROUP_OPEN_CHAT,
                 headers: form.getHeaders(),
                 data: form
             })
             .then((resolve) => {
                 conversation = resolve.data;
-                // console.log(conversation);
-                // console.log(roomName);
-                conversation.broadcastId = broadcastId;
-                // socketio.to(broadcastId).emit('broadcast', conversation);
-                var socketId = listOfSocket.find(u => u.user === room.from).socketId;
-                socketio.to(socketId).emit('broadcast', conversation);
+                
+                conversation.roomName = roomName;
+                conversation.socketId = socket.id;
+                socketio.to(socket.id).emit('group_room', conversation);
             })
             .catch((error) => {
                 console.log(error);
-                errorlog.error(`Error join_broadcast axios BROADCAST_OPEN_CHAT : ${error}`);
+                errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
             });
 
     });
 
-    socket.on('send_message_broadcast', (newMessage) => {
-        var broadcastId = newMessage.broadcastId;
-
+    socket.on('send_message_group', (newMessage) => {
+        var roomName = newMessage.room;
+        
         const form = new FormData();
-        // console.log(newMessage);
-        form.append('broadcast_id', newMessage.broadcast_id);
+        console.log(newMessage);
         form.append('from', newMessage.from);
+        form.append('to', newMessage.to);
+        form.append('room', roomName);
         form.append('msg', newMessage.msg);
         form.append('media1', newMessage.media1);
         form.append('media_type', newMessage.media_type);
 
         axios({
                 method: 'post',
-                url: process.env.BROADCAST_SUBMIT_CHAT,
+                url: process.env.SUBMIT_GROUP_CHAT,
                 headers: form.getHeaders(),
                 data: form
             })
             .then((resolve) => {
                 console.log(resolve.data);
+                var conversation = resolve.data;
+                conversation.room = roomName;
 
-                // TODO or Remove
-                const form = new FormData();
-                form.append('broadcast_id', newMessage.broadcast_id);
-                form.append('my_id', newMessage.from);
-                form.append('offset', 0);
-
-                axios({
-                        method: 'post',
-                        url: process.env.BROADCAST_OPEN_CHAT,
-                        headers: form.getHeaders(),
-                        data: form
-                    })
-                    .then((resolve) => {
-                        conversation = resolve.data;
-                        // console.log(conversation);
-                        conversation.broadcastId = broadcastId;
-
-                        // console.log(broadcastId);
-                        socketio.in(broadcastId).emit('broadcast', conversation);
-                        // var socketId = listOfSocket.find(u => u.user === room.from).socketId;
-                        // socketio.to(socketId).emit('broadcast', conversation);      
-                    })
-                    .catch((error) => { 
-                        console.log(error);
-                        errorlog.error(`Error send_message_broadcast BROADCAST_OPEN_CHAT : ${error}`);
-                    });
+                socketio.in(roomName).emit('receive_group_message', conversation);
+                successlog.info(`Send message to : ${roomName}`);
             })
             .catch((error) => {
                 console.log(error);
-                errorlog.error(`Error send_message_broadcast axios BROADCAST_SUBMIT_CHAT : ${error}`);
+                errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
             });
     });
 
-    socket.on('scroll_max_broadcast', (room) => {
-        var broadcastId = room.broadcast_id;
-
+    socket.on('scroll_max_group', (room) => {
         // console.log(room);
+        var roomName = room.room;
+        var socketId;
+
+        if (room.socket_id && room.socket_id != '') {
+            socketId = room.socket_id;
+        } else {
+            socketId = socket.id;
+        }
+
+        socket.join(roomName);
 
         const form = new FormData();
-        form.append('broadcast_id', room.broadcast_id);
-        form.append('my_id', room.from);
+        form.append('room', roomName);
         form.append('offset', room.offset);
 
         axios({
                 method: 'post',
-                url: process.env.BROADCAST_OPEN_CHAT,
+                url: process.env.GROUP_OPEN_CHAT,
                 headers: form.getHeaders(),
                 data: form
             })
             .then((resolve) => {
                 conversation = resolve.data;
-                // console.log(conversation);
-                conversation.broadcastId = broadcastId;
-
-                //console.log(broadcastId);
-                // socketio.to(broadcastId).emit('broadcast', conversation);
-                var socketId = listOfSocket.find(u => u.user === room.from).socketId;
-                socketio.to(socketId).emit('broadcast', conversation);
+                
+                conversation.roomName = roomName;
+                conversation.socketId = socketId;
+                socketio.to(socketId).emit('group_room', conversation);
             })
             .catch((error) => {
-                  console.log(error);
-                  errorlog.error(`Error scroll_max_broadcast : ${error}`);
-                }
-              );
+                console.log(error);
+                errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
+            });
 
     })
 

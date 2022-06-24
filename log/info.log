@@ -1,0 +1,120 @@
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:04:56.828Z'
+}
+{
+  message: 'Load all message for : 7HX9OXhqymZUF2IUAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:04:56.998Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:05:03.655Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:05:03.660Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:10:53.131Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:11:23.998Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:18:02.134Z'
+}
+{
+  message: 'Send message to : masso',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:21:12.766Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:24:40.245Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:26:07.239Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:26:45.635Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:26:57.141Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:29:05.463Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:29:24.120Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:30:07.625Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:30:25.615Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:30:42.619Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:30:56.477Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:34:20.742Z'
+}
+{
+  message: 'Send message to : 41',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-06-24T17:34:27.958Z'
+}

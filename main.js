@@ -173,8 +173,7 @@ socketio.on('connect', socket => {
     // Group Chat
 
     socket.on('join_group', (room) => {
-        console.log(room);
-        var roomName = room.room;
+        var roomName = parseInt(room.room);
 
         socket.join(roomName);
         console.log(roomName);
@@ -204,8 +203,8 @@ socketio.on('connect', socket => {
     });
 
     socket.on('send_message_group', (newMessage) => {
-        var roomName = newMessage.room;
-        
+        var roomName = parseInt(newMessage.room);
+
         const form = new FormData();
         console.log(newMessage);
         form.append('from', newMessage.from);
@@ -237,7 +236,7 @@ socketio.on('connect', socket => {
 
     socket.on('scroll_max_group', (room) => {
         // console.log(room);
-        var roomName = room.room;
+        var roomName = parseInt(room.room);
         var socketId;
 
         if (room.socket_id && room.socket_id != '') {

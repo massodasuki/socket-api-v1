@@ -76,7 +76,7 @@ socketio.on('connect', socket => {
             })
             .then((resolve) => {
                 conversation = resolve.data;
-                // console.log(conversation);
+                console.log(conversation);
                 conversation.room = roomName;
 
                 // console.log(roomName);
@@ -199,14 +199,15 @@ socketio.on('connect', socket => {
                     messageList[index].broadcast_id = parseInt(messageList[index].broadcast_id)
                     messageList[index].from = parseInt(messageList[index].from)
                     messageList[index].to = parseInt(messageList[index].to)
-                    messageList[index].to = parseInt(messageList[index].created_at)
+                    messageList[index].created_at = parseInt(messageList[index].created_at)
                 }
-                conversation.data = messageList;            
+                conversation.data = messageList; 
+                         
                 
                 conversation.roomName = roomName;
                 conversation.socketId = socket.id;
 
-
+                console.log(conversation);
                 socketio.to(socket.id).emit('group_room', conversation);
             })
             .catch((error) => {
@@ -285,10 +286,11 @@ socketio.on('connect', socket => {
                     messageList[index].broadcast_id = parseInt(messageList[index].broadcast_id)
                     messageList[index].from = parseInt(messageList[index].from)
                     messageList[index].to = parseInt(messageList[index].to)
-                    messageList[index].to = parseInt(messageList[index].created_at)
+                    messageList[index].created_at = parseInt(messageList[index].created_at)
                 }
-                conversation.data = messageList;  
+                conversation.data = messageList;
 
+                console.log(conversation);
                 socketio.to(socketId).emit('group_room', conversation);
             })
             .catch((error) => {

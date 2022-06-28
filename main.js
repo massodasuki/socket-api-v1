@@ -190,9 +190,23 @@ socketio.on('connect', socket => {
             })
             .then((resolve) => {
                 conversation = resolve.data;
+
+                //parse str to int
+                var messageList = conversation.data;
+                messageList.forEach(strToInt);
+                function strToInt(item, index) {
+                    messageList[index].type = parseInt(messageList[index].type)
+                    messageList[index].broadcast_id = parseInt(messageList[index].broadcast_id)
+                    messageList[index].from = parseInt(messageList[index].from)
+                    messageList[index].to = parseInt(messageList[index].to)
+                    messageList[index].to = parseInt(messageList[index].created_at)
+                }
+                conversation.data = messageList;            
                 
                 conversation.roomName = roomName;
                 conversation.socketId = socket.id;
+
+
                 socketio.to(socket.id).emit('group_room', conversation);
             })
             .catch((error) => {
@@ -262,6 +276,19 @@ socketio.on('connect', socket => {
                 
                 conversation.roomName = roomName;
                 conversation.socketId = socketId;
+
+                //parse str to int
+                var messageList = conversation.data;
+                messageList.forEach(strToInt);
+                function strToInt(item, index) {
+                    messageList[index].type = parseInt(messageList[index].type)
+                    messageList[index].broadcast_id = parseInt(messageList[index].broadcast_id)
+                    messageList[index].from = parseInt(messageList[index].from)
+                    messageList[index].to = parseInt(messageList[index].to)
+                    messageList[index].to = parseInt(messageList[index].created_at)
+                }
+                conversation.data = messageList;  
+
                 socketio.to(socketId).emit('group_room', conversation);
             })
             .catch((error) => {

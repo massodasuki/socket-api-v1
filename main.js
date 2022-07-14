@@ -8,7 +8,7 @@ const axios = require('axios').default;
 const Storage = require('node-storage');
 const store = new Storage('path/to/file');
 var path = require('path');
-var errorLog = require(path.join(__dirname, './utils/logger')).errorlog;
+var errorlog = require(path.join(__dirname, './utils/logger')).errorlog;
 var successlog = require(path.join(__dirname, './utils/logger')).successlog;
 
 app.get('/', (req, res) => {

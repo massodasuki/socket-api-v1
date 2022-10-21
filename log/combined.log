@@ -238,3 +238,9 @@
   service: 'user-service',
   timestamp: '2022-06-28T22:56:13.048Z'
 }
+{
+  message: 'Error join_group axios GROUP_OPEN_CHAT : AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-10-21T17:47:15.389Z'
+}

@@ -11,6 +11,8 @@ var path = require('path');
 var errorlog = require(path.join(__dirname, './utils/logger')).errorlog;
 var successlog = require(path.join(__dirname, './utils/logger')).successlog;
 
+var isDebug = false;
+
 app.get('/', (req, res) => {
     successlog.info(`Node Server is running. Yay!!`);
     res.send("Node Server is running. Yay!!")
@@ -43,7 +45,7 @@ socketio.on('connect', socket => {
                 socketId: socket.id
             }
         }
-        console.log(listOfSocket);
+         if (isDebug) { console.log(listOfSocket); }
 
         // store.put(roomA, 'world');
         var roomName = store.get(roomA) ? store.get(roomA) : store.get(roomB);
@@ -76,7 +78,7 @@ socketio.on('connect', socket => {
             })
             .then((resolve) => {
                 conversation = resolve.data;
-                console.log(conversation);
+                 if (isDebug) { console.log(conversation); }
                 conversation.room = roomName;
 
                 // console.log(roomName);
@@ -84,11 +86,11 @@ socketio.on('connect', socket => {
                 // socketio.to(roomName).emit('room', conversation);
                 var socketId = listOfSocket.find(u => u.user === room.from).socketId;
                 socketio.to(socketId).emit('room', conversation);
-                console.log('Load all message for : ', socketId);
+                 if (isDebug) { console.log('Load all message for : ', socketId); }
                 successlog.info(`Load all message for : ${socketId}`);
             })
             .catch((error) => {
-                console.log(error);
+                 if (isDebug) { console.log(error); }
                 errorlog.error(`Error Message : ${error}`)
             });
 
@@ -114,7 +116,7 @@ socketio.on('connect', socket => {
                 data: form
             })
             .then((resolve) => {
-                console.log(resolve.data)
+                 if (isDebug) { console.log(resolve.data) }
                 var conversation = resolve.data;
                 conversation.room = roomName;
 
@@ -131,7 +133,7 @@ socketio.on('connect', socket => {
 
             })
             .catch((error) => { 
-                console.log('Send Message', error);
+                 if (isDebug) { console.log('Send Message error', error); }
                 errorlog.error(`Error send_message axios: ${error}`);
           });
     });
@@ -160,11 +162,11 @@ socketio.on('connect', socket => {
                 // console.log(roomName);
                 var socketId = listOfSocket.find(u => u.user === room.from).socketId;
                 socketio.to(socketId).emit('room', conversation);
-                console.log('Scrolling by : ', socketId);
+                 if (isDebug) { console.log('Scrolling by : ', socketId); }
                 successlog.info(`Scrolling by : ${socketId}`);
             })
             .catch((error) => {
-                console.log(error);
+                 if (isDebug) { console.log(error); }
                 errorlog.error(`Error scroll_max axios : ${error}`);
             });
     })
@@ -176,10 +178,9 @@ socketio.on('connect', socket => {
         var roomName = parseInt(room.room);
 
         socket.join(roomName);
-        console.log(roomName);
-
+         if (isDebug) { console.log(roomName); }
         const form = new FormData();
-        form.append('room', roomName);
+        form.append('user_id', roomName);
         form.append('offset', 0);
 
         axios({
@@ -207,11 +208,11 @@ socketio.on('connect', socket => {
                 conversation.roomName = roomName;
                 conversation.socketId = socket.id;
 
-                console.log(conversation);
+                 if (isDebug) { console.log(conversation); }
                 socketio.to(socket.id).emit('group_room', conversation);
             })
             .catch((error) => {
-                console.log(error);
+                 if (isDebug) { console.log(error); }
                 errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
             });
 
@@ -221,7 +222,7 @@ socketio.on('connect', socket => {
         var roomName = parseInt(newMessage.room);
 
         const form = new FormData();
-        console.log(newMessage);
+         if (isDebug) { console.log(newMessage); }
         form.append('from', newMessage.from);
         form.append('to', newMessage.to);
         form.append('room', roomName);
@@ -236,7 +237,7 @@ socketio.on('connect', socket => {
                 data: form
             })
             .then((resolve) => {
-                console.log(resolve.data);
+                 if (isDebug) { console.log(resolve.data); }
                 var conversation = resolve.data;
                 conversation.room = roomName;
 
@@ -244,7 +245,7 @@ socketio.on('connect', socket => {
                 successlog.info(`Send message to : ${roomName}`);
             })
             .catch((error) => {
-                console.log(error);
+                 if (isDebug) { console.log(error); }
                 errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
             });
     });
@@ -290,11 +291,11 @@ socketio.on('connect', socket => {
                 }
                 conversation.data = messageList;
 
-                console.log(conversation);
+                 if (isDebug) { console.log(conversation); }
                 socketio.to(socketId).emit('group_room', conversation);
             })
             .catch((error) => {
-                console.log(error);
+                 if (isDebug) { console.log(error); }
                 errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
             });
 

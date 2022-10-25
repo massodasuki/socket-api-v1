@@ -180,7 +180,7 @@ socketio.on('connect', socket => {
         socket.join(roomName);
          if (isDebug) { console.log(roomName); }
         const form = new FormData();
-        form.append('user_id', roomName);
+        form.append('room', roomName);
         form.append('offset', 0);
 
         axios({

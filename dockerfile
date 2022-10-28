@@ -1,25 +1,9 @@
-## FROM node:12.17.0-alpine
-## WORKDIR /usr
-## COPY package.json ./
-## COPY log ./log
-## COPY path ./path
-## COPY utils ./utils
-## COPY main.js ./main.js
-## RUN ls -a
-## RUN npm install
-## RUN npm run build
-
-## this is stage two , where the app actually runs
-FROM node:12.17.0-alpine
-COPY package.json /app
-COPY log /app/log
-COPY path /app/path
-COPY utils /app/utils
-COPY main.js /app/main.js
-## RUN npm install --only=production
-## COPY --from=0 /usr/dist .
-WORKDIR /app
-RUN npm install
+FROM node:alpine
 RUN npm install pm2 -g
+COPY . /app
+WORKDIR /app
+ENV NODE_ENV=development
 EXPOSE 3000
 CMD ["pm2-runtime","main.js"]
+
+

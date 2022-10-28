@@ -238,3 +238,153 @@
   service: 'user-service',
   timestamp: '2022-06-28T22:56:13.048Z'
 }
+{
+  message: 'Send message to : 7',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:17:58.054Z'
+}
+{
+  message: 'Send message to : 7',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:18:55.450Z'
+}
+{
+  message: 'Send message to : 7',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:20:52.246Z'
+}
+{
+  message: 'Send message to : 7',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:21:25.349Z'
+}
+{
+  message: 'Send message to : 7',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:21:59.706Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:25:31.597Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:26:37.319Z'
+}
+{
+  message: 'Load all message for : 7xeLmp4AR3P5fByQAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:26:38.475Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:27:33.472Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:27:33.474Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:27:34.191Z'
+}
+{
+  message: 'Load all message for : qEqhpdTQkgKieXJcAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:27:35.274Z'
+}
+{
+  message: 'Send message to : qEqhpdTQkgKieXJcAAAC and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:27:35.935Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:28:00.005Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:28:00.007Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:28:00.697Z'
+}
+{
+  message: 'Load all message for : _T8SqtCMg_3zfIJNAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:28:01.808Z'
+}
+{
+  message: 'Send message to : _T8SqtCMg_3zfIJNAAAD and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:28:02.552Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:30:00.435Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:30:00.437Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:30:01.173Z'
+}
+{
+  message: 'Load all message for : 0NNokqbWX3wGAoUNAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:30:02.262Z'
+}
+{
+  message: 'Send message to : 0NNokqbWX3wGAoUNAAAE and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:30:04.201Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:30:32.724Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:30:32.729Z'
+}

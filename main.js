@@ -11,7 +11,7 @@ var path = require('path');
 var errorlog = require(path.join(__dirname, './utils/logger')).errorlog;
 var successlog = require(path.join(__dirname, './utils/logger')).successlog;
 
-var isDebug = false;
+var isDebug = true;
 
 app.get('/', (req, res) => {
     successlog.info(`Node Server is running. Yay!!`);
@@ -101,6 +101,14 @@ socketio.on('connect', socket => {
     socket.on('send_message', (newMessage) => {
         var roomName = newMessage.room;
 
+        // if (Array.isArray(newMessage.media1))
+        // {
+        //     loop;
+        // }
+        //  else 
+        // {
+        //   single
+        // }
         const form = new FormData();
         // console.log(newMessage);
         form.append('from', newMessage.from);

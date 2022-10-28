@@ -19,6 +19,7 @@ COPY utils ./utils
 COPY main.js ./main.js
 ## RUN npm install --only=production
 ## COPY --from=0 /usr/dist .
+RUN npm -i
 RUN npm install pm2 -g
 EXPOSE 3000
 CMD ["pm2-runtime","main.js"]

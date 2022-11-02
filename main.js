@@ -24,7 +24,7 @@ var listOfSocket = [{
 socketio.on('connect', socket => {
 
     socket.on('join', (room) => {
-        // console.log(room);
+        console.log(room);
         var roomA = '' + room.from + '-' + room.to + '';
         var roomB = '' + room.to + '-' + room.from + '';
 
@@ -95,45 +95,135 @@ socketio.on('connect', socket => {
 
     });
 
+    function postSubmitChat (from, to, msg, media1, media_type) {
+        return new Promise(function(resolve, reject) {
+
+
+            const form = new FormData();
+            console.log(newMessage);
+            form.append('from', from);
+            form.append('to', to);
+            form.append('msg', msg);
+            form.append('media1', media1);
+            form.append('media_type', media_type);
+
+            axios({
+                    method: 'post',
+                    url: process.env.SUBMIT_CHAT,
+                    headers: form.getHeaders(),
+                    data: form
+                })
+                .then((resolve) => {
+                    console.log(resolve.data)
+                    var conversation = resolve.data;
+                    conversation.room = roomName;
+
+                    var toSocketId = listOfSocket.find(u => u.user === newMessage.to);
+                    if (toSocketId) {
+                        toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
+                    } else {
+                        toSocketId = '';
+                    }
+
+                    var fromSocketId = listOfSocket.find(u => u.user === newMessage.from).socketId;
+                    socketio.to(toSocketId).to(fromSocketId).emit('receive_message', conversation);
+                    successlog.info(`Send message to : ${fromSocketId} and ${toSocketId}`);
+                    return resolve({ ok: 200 });
+
+                })
+                .catch((error) => {
+                    console.log('Send Message', error);
+                    errorlog.error(`Error send_message axios: ${error}`);
+                    return reject({ok: 500,  msg: error});
+              });
+                        
+        })
+    }
+
+
 
     socket.on('send_message', (newMessage) => {
         var roomName = newMessage.room;
 
-        const form = new FormData();
-        // console.log(newMessage);
-        form.append('from', newMessage.from);
-        form.append('to', newMessage.to);
-        form.append('msg', newMessage.msg);
-        form.append('media1', newMessage.media1);
-        form.append('media_type', newMessage.media_type);
 
-        axios({
-                method: 'post',
-                url: process.env.SUBMIT_CHAT,
-                headers: form.getHeaders(),
-                data: form
-            })
-            .then((resolve) => {
-                console.log(resolve.data)
-                var conversation = resolve.data;
-                conversation.room = roomName;
+        //         media1 = [
+        // {"item":"xxxxxx", "type":"png"}, 
+        // {"item":"xxxxxx", "type":"png"}, 
+        // {"item":"xxxxxx", "type":"png"}, 
+        // {"item":"xxxxxx", "type":"png"}, 
+        // {"item":"xxxxxx", "type":"png"}
+        // ]
 
-                var toSocketId = listOfSocket.find(u => u.user === newMessage.to);
-                if (toSocketId) {
-                    toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
-                } else {
-                    toSocketId = '';
+
+        if(Array.isArray(newMessage.media1)) {
+            var listItem = newMessage.media1;
+            for(let i = 0; i < media1.length; i++){ 
+                console.log(media1[i].item, media1[i].type);
+
+                if (i != 0) {
+                    newMessage.msg = "";
                 }
+                postSubmitChat (newMessage.from, newMessage.to, newMessage.msg, listItem[i].item, listItem[i].type)
+                    .then((resolve) => {
+                        console.log(resolve);
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                        errorlog.error(`Error Message : ${error}`)
+                    });
+            }
 
-                var fromSocketId = listOfSocket.find(u => u.user === newMessage.from).socketId;
-                socketio.to(toSocketId).to(fromSocketId).emit('receive_message', conversation);
-                successlog.info(`Send message to : ${fromSocketId} and ${toSocketId}`);
-
+        } else {
+            postSubmitChat (newMessage.from, newMessage.to, newMessage.msg, newMessage.media1, newMessage.media_type)
+            .then((resolve) => {
+                console.log(resolve);
             })
-            .catch((error) => { 
-                console.log('Send Message', error);
-                errorlog.error(`Error send_message axios: ${error}`);
-          });
+            .catch((error) => {
+                console.log(error);
+                errorlog.error(`Error Message : ${error}`)
+            });
+
+        }
+
+
+            
+
+
+        // const form = new FormData();
+        // console.log(newMessage);
+        // form.append('from', newMessage.from);
+        // form.append('to', newMessage.to);
+        // form.append('msg', newMessage.msg);
+        // form.append('media1', newMessage.media1);
+        // form.append('media_type', newMessage.media_type);
+
+        // axios({
+        //         method: 'post',
+        //         url: process.env.SUBMIT_CHAT,
+        //         headers: form.getHeaders(),
+        //         data: form
+        //     })
+        //     .then((resolve) => {
+        //         console.log(resolve.data)
+        //         var conversation = resolve.data;
+        //         conversation.room = roomName;
+
+        //         var toSocketId = listOfSocket.find(u => u.user === newMessage.to);
+        //         if (toSocketId) {
+        //             toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
+        //         } else {
+        //             toSocketId = '';
+        //         }
+
+        //         var fromSocketId = listOfSocket.find(u => u.user === newMessage.from).socketId;
+        //         socketio.to(toSocketId).to(fromSocketId).emit('receive_message', conversation);
+        //         successlog.info(`Send message to : ${fromSocketId} and ${toSocketId}`);
+
+        //     })
+        //     .catch((error) => {
+        //         console.log('Send Message', error);
+        //         errorlog.error(`Error send_message axios: ${error}`);
+        //   });
     });
 
     socket.on('scroll_max', (room) => {
@@ -201,9 +291,9 @@ socketio.on('connect', socket => {
                     messageList[index].to = parseInt(messageList[index].to)
                     messageList[index].created_at = parseInt(messageList[index].created_at)
                 }
-                conversation.data = messageList; 
-                         
-                
+                conversation.data = messageList;
+
+
                 conversation.roomName = roomName;
                 conversation.socketId = socket.id;
 
@@ -274,7 +364,7 @@ socketio.on('connect', socket => {
             })
             .then((resolve) => {
                 conversation = resolve.data;
-                
+
                 conversation.roomName = roomName;
                 conversation.socketId = socketId;
 

@@ -238,3 +238,1473 @@
   service: 'user-service',
   timestamp: '2022-06-28T22:56:13.048Z'
 }
+{
+  message: 'Node Server is running. Yay!!',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:13:37.337Z'
+}
+{
+  message: 'Node Server is running. Yay!!',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:17:14.985Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:27:08.160Z'
+}
+{
+  message: 'Load all message for : UtCSmDFqNOV9RDk3AACs',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:27:08.419Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:30:03.755Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:30:03.755Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:30:04.146Z'
+}
+{
+  message: 'Load all message for : YNtnOi6cuFXo5uiIAADQ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:30:04.242Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:49:29.720Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:49:29.721Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:49:29.901Z'
+}
+{
+  message: 'Load all message for : OVxQyfSRqhC_09YzAAG5',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:49:29.993Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:53:28.834Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:53:28.834Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:53:29.043Z'
+}
+{
+  message: 'Load all message for : mFyQs6z6WKehfLHnAAHp',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:53:29.170Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:54:41.803Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:54:41.805Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:54:42.009Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:54:42.018Z'
+}
+{
+  message: 'Load all message for : EoidGpTh-ztzUWa1AAH5',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:54:42.161Z'
+}
+{
+  message: 'Load all message for : EoidGpTh-ztzUWa1AAH5',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:54:43.134Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:55:16.577Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:55:16.578Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:55:16.771Z'
+}
+{
+  message: 'Load all message for : NGocZy4pACb5hei6AAIB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:55:16.849Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:55:16.877Z'
+}
+{
+  message: 'Load all message for : NGocZy4pACb5hei6AAIB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:55:16.959Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:56:48.170Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:56:48.174Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:56:48.381Z'
+}
+{
+  message: 'Load all message for : b2smU_WKpY8Nku4gAAIU',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:56:48.477Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:56:48.487Z'
+}
+{
+  message: 'Load all message for : b2smU_WKpY8Nku4gAAIU',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T18:56:48.652Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T19:20:39.880Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-25T19:20:39.882Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:31:20.414Z'
+}
+{
+  message: 'Load all message for : bf6J_Mk8X9g5QAqWAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:31:20.831Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:32:30.988Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:32:30.992Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:32:32.278Z'
+}
+{
+  message: 'Load all message for : MKExJkCJaj_cPODNAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:32:32.486Z'
+}
+{
+  message: "Error send_message axios: TypeError: Cannot read property 'socketId' of undefined",
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:32:37.419Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:32:50.925Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:32:50.926Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:32:51.115Z'
+}
+{
+  message: 'Load all message for : pRrI3NRkpmBFLWq2AAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:32:51.353Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:37:23.048Z'
+}
+{
+  message: 'Load all message for : rWRtBZ_bAzmZX51qAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:37:23.287Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:37:29.337Z'
+}
+{
+  message: 'Load all message for : u8PRYp2VUN1KNRjdAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:37:29.554Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:38:17.924Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:38:29.053Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:38:58.338Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:39:54.159Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:39:54.165Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:39:54.341Z'
+}
+{
+  message: 'Load all message for : vk8_605U4LhjWx3hAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:39:54.563Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:41:21.664Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:41:21.668Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:41:21.824Z'
+}
+{
+  message: 'Load all message for : CmfSeVKy3OpRjwVuAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:41:22.006Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:41:30.022Z'
+}
+{
+  message: 'Load all message for : 0a5a88odrXJwx5KRAAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:41:30.276Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:42:17.927Z'
+}
+{
+  message: 'Load all message for : H6B3HufovSmTNzJJAAAG',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:42:18.136Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:42:25.153Z'
+}
+{
+  message: 'Load all message for : N6tNFUBN-e0V-xPQAAAH',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:42:25.364Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:42:29.968Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:44:46.273Z'
+}
+{
+  message: 'Load all message for : tcbHNJv7bKgIQW0RAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:44:47.431Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:44:51.318Z'
+}
+{
+  message: 'Load all message for : diSAO61CPqVxZNkXAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:44:51.540Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:45:59.395Z'
+}
+{
+  message: 'Load all message for : Kb7X3JENyAJsdX5iAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:45:59.700Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:46:05.577Z'
+}
+{
+  message: 'Load all message for : 22r4hCVoHms1wGMDAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:46:05.773Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:46:09.857Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:04:52.146Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:04:52.151Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:04:52.327Z'
+}
+{
+  message: 'Load all message for : _ZGlbkb0yXuR8bhzAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:04:52.436Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:05:10.980Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:05:10.982Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:05:11.180Z'
+}
+{
+  message: 'Load all message for : ilpD626Uv-VjhCJ9AAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:05:11.245Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:07:28.591Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:07:28.593Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:07:28.805Z'
+}
+{
+  message: 'Load all message for : MrsKcSoEYdA1OWmfAAAG',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:07:29.033Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:08:54.014Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:08:54.016Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:08:54.196Z'
+}
+{
+  message: 'Load all message for : hI2Ce5Sb9qsKQeYBAAAH',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:08:54.417Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:10:53.791Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:10:53.797Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:10:53.972Z'
+}
+{
+  message: 'Load all message for : 5iTOu_fXg7KYwmrsAAAI',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:10:54.130Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:13:18.683Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:13:18.685Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:13:18.885Z'
+}
+{
+  message: 'Load all message for : YRF6RwBenaBWV-XGAAAJ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:13:19.131Z'
+}
+{
+  message: 'Create Room: [object Object]',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:13:30.951Z'
+}
+{
+  message: 'Join Room: [object Object]',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:13:32.450Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:17:32.071Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:17:32.124Z'
+}
+{
+  message: 'Load all message for : ClvTDQMPAQXa5o-VAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:17:32.276Z'
+}
+{
+  message: 'Load all message for : ClvTDQMPAQXa5o-VAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:17:32.411Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:17:34.589Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:17:34.590Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:17:42.986Z'
+}
+{
+  message: 'Load all message for : 30qlLCvP7k13vujwAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:17:43.098Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:23:39.530Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:23:39.532Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:23:46.413Z'
+}
+{
+  message: 'Load all message for : F5YVEjjftsUoNN8xAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:23:46.515Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:24:59.102Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:24:59.106Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:25:04.754Z'
+}
+{
+  message: 'Load all message for : gr38aAorCllhz0zZAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:25:04.936Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:30:26.137Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:30:26.140Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:30:32.654Z'
+}
+{
+  message: 'Load all message for : rhwxT_PnoCOY649WAAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:30:32.814Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:32:23.556Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:32:23.561Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:32:57.657Z'
+}
+{
+  message: 'Load all message for : 8vsvOUDoYj-aEPu5AAAH',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:32:57.741Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:38:58.089Z'
+}
+{
+  message: 'Load all message for : rO7YxMVFqZtr4eLnAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:38:58.565Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:38:59.117Z'
+}
+{
+  message: 'Load all message for : rO7YxMVFqZtr4eLnAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:38:59.192Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:39:02.749Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:39:02.751Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:39:17.088Z'
+}
+{
+  message: 'Load all message for : KnwSbPNXW1dGSO3vAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:39:17.176Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:39:24.355Z'
+}
+{
+  message: 'Load all message for : R82HzEsaNaaUaVRqAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:39:24.458Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:41:40.472Z'
+}
+{
+  message: 'Load all message for : GvIJbBNO7Aa_1hosAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:41:40.693Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:41:43.852Z'
+}
+{
+  message: 'Load all message for : OmsmGEHx6Cxc78mkAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:41:44.070Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:43:17.082Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:43:17.123Z'
+}
+{
+  message: 'Load all message for : gw_as1mqImPFS4fxAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:43:17.567Z'
+}
+{
+  message: 'Load all message for : gw_as1mqImPFS4fxAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:43:17.615Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:45:16.293Z'
+}
+{
+  message: 'Load all message for : gw_as1mqImPFS4fxAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:45:16.441Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:45:31.335Z'
+}
+{
+  message: 'Load all message for : bg9r00jgumOXbouuAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:45:31.483Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:47:31.913Z'
+}
+{
+  message: 'Load all message for : LyVJCAY-lk2n3twyAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:47:32.080Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:47:42.193Z'
+}
+{
+  message: 'Load all message for : DyTLoxqOWr4PXLqEAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:47:42.297Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:49:02.010Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:49:02.011Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:49:17.874Z'
+}
+{
+  message: 'Load all message for : sMl2Q102X6n5mRKpAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:49:17.967Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:50:10.007Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:50:10.009Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:50:21.010Z'
+}
+{
+  message: 'Load all message for : _jHlfjqNR5lbVi8iAAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:50:21.102Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:50:58.184Z'
+}
+{
+  message: 'Load all message for : 6CAnPRoV0xwRnDaaAAAG',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:50:58.306Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.510Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.511Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.512Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.512Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.528Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.533Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.540Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.543Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.547Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.555Z'
+}
+{
+  message: 'Load all message for : 6thfDtxd3V60CkvzAAAS',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:24.627Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:30.690Z'
+}
+{
+  message: 'Load all message for : b79fdoZH-S1jpVOCAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:30.845Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:31.085Z'
+}
+{
+  message: 'Load all message for : b79fdoZH-S1jpVOCAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:31.167Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:41.802Z'
+}
+{
+  message: 'Load all message for : 2Z-wf_ToptPEFvJIAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:55:41.923Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:58:50.616Z'
+}
+{
+  message: 'Load all message for : S-okWf-JJiSiSzemAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:58:50.806Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:59:02.758Z'
+}
+{
+  message: 'Load all message for : ALK8evl--pz40ZMOAAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T17:59:02.855Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:00:31.078Z'
+}
+{
+  message: 'Load all message for : mnSKkTF0MVydZHEEAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:00:31.433Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:00:45.323Z'
+}
+{
+  message: 'Load all message for : frRcMUZBAd3DYJvJAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:00:45.417Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:03:01.514Z'
+}
+{
+  message: 'Load all message for : V4srBZNcAA9Fi0uXAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:03:01.681Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:03:30.076Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:03:30.078Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:03:34.616Z'
+}
+{
+  message: 'Load all message for : 7cN-kKpQeJ8OO8NUAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:03:34.716Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:04:18.864Z'
+}
+{
+  message: 'Load all message for : -OdQ9XwcXMosnWf5AAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:04:19.046Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:05:29.330Z'
+}
+{
+  message: 'Load all message for : -TZsnPaJ7DgjZjKzAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:05:29.500Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:05:40.847Z'
+}
+{
+  message: 'Load all message for : Rk-zd38SOqCZa-MHAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:05:40.930Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:10:29.672Z'
+}
+{
+  message: 'Load all message for : SbhApeaQKwo7i5yPAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:10:29.963Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:10:41.433Z'
+}
+{
+  message: 'Load all message for : IPMaZVHONc3jRLtCAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:10:41.569Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:11:23.939Z'
+}
+{
+  message: 'Load all message for : azoqp20SyTfLzsN2AAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:11:24.166Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:11:34.045Z'
+}
+{
+  message: 'Load all message for : eG-JfRwMQt2RXDquAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:11:34.138Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:11:47.113Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:11:47.114Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:11:50.094Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:11:50.098Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:11:54.970Z'
+}
+{
+  message: 'Load all message for : E3QNn6Uz-bWMPFsUAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:11:55.122Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:12:10.060Z'
+}
+{
+  message: 'Load all message for : NcWyui4Ry5jxjd3eAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:12:10.176Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:14:03.602Z'
+}
+{
+  message: 'Load all message for : Sgj6HQfIIJ4BvYJOAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:14:03.772Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:14:17.233Z'
+}
+{
+  message: 'Load all message for : 4MUsjsA7A4JmR-rrAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:14:17.354Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:18:19.957Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-08-31T18:18:19.959Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T18:35:10.219Z'
+}
+{
+  message: 'Load all message for : V28e-SRPwa29T6XgAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T18:35:10.377Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T18:35:10.397Z'
+}
+{
+  message: 'Load all message for : V28e-SRPwa29T6XgAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T18:35:10.472Z'
+}
+{
+  message: 'Send message to : V28e-SRPwa29T6XgAAAA and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T18:35:17.438Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T18:51:39.479Z'
+}
+{
+  message: 'Load all message for : QliIAr1BiiqIZ14iAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T18:51:40.600Z'
+}
+{
+  message: 'Send message to : QliIAr1BiiqIZ14iAAAB and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T18:51:48.706Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T18:53:31.983Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T18:53:31.985Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:04:21.336Z'
+}
+{
+  message: 'Load all message for : bjKT90iAOWgu09k-AAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:04:22.498Z'
+}
+{
+  message: 'Create Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:11:05.260Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:11:06.262Z'
+}
+{
+  message: 'Load all message for : c-4eutWRk_bHtlb2AAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:11:06.501Z'
+}
+{
+  message: 'Load all message for : c-4eutWRk_bHtlb2AAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:11:07.520Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:11:08.580Z'
+}
+{
+  message: 'Load all message for : c-4eutWRk_bHtlb2AAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:11:09.807Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:11:38.803Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:11:38.808Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:54:19.857Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-17T19:54:19.859Z'
+}

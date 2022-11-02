@@ -1,0 +1,36 @@
+{
+  message: "Error send_message axios: TypeError: Cannot read property 'socketId' of undefined",
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:32:37.419Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:38:17.924Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:38:29.053Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:38:58.338Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:42:29.968Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-08-31T16:46:09.857Z'
+}

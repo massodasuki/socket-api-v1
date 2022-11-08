@@ -1708,3 +1708,507 @@
   service: 'user-service',
   timestamp: '2022-10-17T19:54:19.859Z'
 }
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-20T07:39:44.605Z'
+}
+{
+  message: 'Load all message for : Frp7Z_MtB_Ofg5AeAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-20T07:39:45.089Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-20T07:39:50.042Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-10-20T07:39:50.048Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:15:48.419Z'
+}
+{
+  message: 'Load all message for : lrCvMfI96Kcj4XoHAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:15:49.809Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:17:13.045Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:17:13.050Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:17:13.854Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:18:04.638Z'
+}
+{
+  message: 'Load all message for : 1sTOn-NxZiXf3_KsAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:18:06.146Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:19:53.367Z'
+}
+{
+  message: 'Load all message for : ZAcX977NX7kLJUelAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:19:54.895Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:20:47.357Z'
+}
+{
+  message: 'Load all message for : gUbxA3kOqbC2kGIzAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:20:48.793Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.454Z'
+}
+{
+  message: 'Error Message : ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.589Z'
+}
+{
+  message: 'Error Message : ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.592Z'
+}
+{
+  message: 'Error Message : ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.601Z'
+}
+{
+  message: 'Error Message : ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.612Z'
+}
+{
+  message: 'Error Message : ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.615Z'
+}
+{
+  message: 'Load all message for : ClJFAIxK6JUGSzJVAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:04.866Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:58.362Z'
+}
+{
+  message: 'Load all message for : gvVPp3Ym9o_cVjALAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:59.811Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.131Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.134Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.746Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.749Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.772Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.774Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.783Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.800Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.809Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.811Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:32.197Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:32.199Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:53.304Z'
+}
+{
+  message: 'Load all message for : 3Mtn9Zmzas57tjSwAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:54.710Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.326Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.328Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.444Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.447Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.473Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.477Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.502Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.504Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:56.458Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:56.459Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:52.592Z'
+}
+{
+  message: 'Load all message for : OxDKmJ-_Ru0b-pjgAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.175Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.853Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.854Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.977Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.981Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.988Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.989Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:55.013Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:55.014Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:55.874Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:55.878Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:03.534Z'
+}
+{
+  message: 'Load all message for : dtYhToUfHEb34fWUAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.044Z'
+}
+{
+  message: 'Send message to : dtYhToUfHEb34fWUAAAB and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.677Z'
+}
+{
+  message: 'Error send_message axios: TypeError: resolve is not a function',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.684Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.685Z'
+}
+{
+  message: 'Send message to : dtYhToUfHEb34fWUAAAB and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.688Z'
+}
+{
+  message: 'Error send_message axios: TypeError: resolve is not a function',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.689Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.690Z'
+}
+{
+  message: 'Send message to : dtYhToUfHEb34fWUAAAB and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:06.721Z'
+}
+{
+  message: 'Error send_message axios: TypeError: resolve is not a function',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:06.734Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:06.737Z'
+}
+{
+  message: 'Send message to : dtYhToUfHEb34fWUAAAB and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:10.798Z'
+}
+{
+  message: 'Error send_message axios: TypeError: resolve is not a function',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:10.806Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:10.807Z'
+}
+{
+  message: 'Send message to : dtYhToUfHEb34fWUAAAB and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:35.936Z'
+}
+{
+  message: 'Error send_message axios: TypeError: resolve is not a function',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:35.947Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:35.949Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:38:00.330Z'
+}
+{
+  message: 'Load all message for : Qjcz56IgLNT6tDwSAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:38:01.728Z'
+}
+{
+  message: 'Send message to : Qjcz56IgLNT6tDwSAAAA and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:38:04.187Z'
+}
+{
+  message: 'Send message to : Qjcz56IgLNT6tDwSAAAA and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:38:04.201Z'
+}
+{
+  message: 'Send message to : Qjcz56IgLNT6tDwSAAAA and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:38:04.206Z'
+}
+{
+  message: 'Send message to : Qjcz56IgLNT6tDwSAAAA and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:38:04.221Z'
+}
+{
+  message: 'Send message to : Qjcz56IgLNT6tDwSAAAA and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:38:04.234Z'
+}

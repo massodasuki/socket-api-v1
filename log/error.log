@@ -34,3 +34,273 @@
   service: 'user-service',
   timestamp: '2022-08-31T16:46:09.857Z'
 }
+{
+  message: 'Error Message : ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.589Z'
+}
+{
+  message: 'Error Message : ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.592Z'
+}
+{
+  message: 'Error Message : ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.601Z'
+}
+{
+  message: 'Error Message : ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.612Z'
+}
+{
+  message: 'Error Message : ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:22:03.615Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.131Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.134Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.746Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.749Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.772Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.774Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.783Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.800Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.809Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:23:01.811Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.326Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.328Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.444Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.447Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.473Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.477Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.502Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:55.504Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: roomName is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:56.458Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:26:56.459Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.853Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.854Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.977Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.981Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.988Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:54.989Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:55.013Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:55.014Z'
+}
+{
+  message: 'Error send_message axios: ReferenceError: newMessage is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:55.874Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:29:55.878Z'
+}
+{
+  message: 'Error send_message axios: TypeError: resolve is not a function',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.684Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.685Z'
+}
+{
+  message: 'Error send_message axios: TypeError: resolve is not a function',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.689Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:05.690Z'
+}
+{
+  message: 'Error send_message axios: TypeError: resolve is not a function',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:06.734Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:06.737Z'
+}
+{
+  message: 'Error send_message axios: TypeError: resolve is not a function',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:10.806Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:10.807Z'
+}
+{
+  message: 'Error send_message axios: TypeError: resolve is not a function',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:35.947Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-11-08T16:31:35.949Z'
+}

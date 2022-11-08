@@ -76,8 +76,8 @@ socketio.on('connect', socket => {
             })
             .then((resolve) => {
                 conversation = resolve.data;
-                console.log(conversation);
                 conversation.room = roomName;
+                console.log(conversation);
 
                 // console.log(roomName);
                 // socketio.in(roomName).emit('room', conversation);
@@ -95,12 +95,11 @@ socketio.on('connect', socket => {
 
     });
 
-    function postSubmitChat (from, to, msg, media1, media_type) {
+    function postSubmitChat (from, to, msg, media1, media_type, room_name) {
         return new Promise(function(resolve, reject) {
 
-
             const form = new FormData();
-            console.log(newMessage);
+            
             form.append('from', from);
             form.append('to', to);
             form.append('msg', msg);
@@ -113,19 +112,20 @@ socketio.on('connect', socket => {
                     headers: form.getHeaders(),
                     data: form
                 })
-                .then((resolve) => {
-                    console.log(resolve.data)
-                    var conversation = resolve.data;
-                    conversation.room = roomName;
+                .then((status) => {
+                    // console.log(resolve.data)
+                    var conversation = status.data;
+                    conversation.room = room_name;
+                    console.log(conversation)
 
-                    var toSocketId = listOfSocket.find(u => u.user === newMessage.to);
+                    var toSocketId = listOfSocket.find(u => u.user === to);
                     if (toSocketId) {
-                        toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
+                        toSocketId = listOfSocket.find(u => u.user === to).socketId;
                     } else {
                         toSocketId = '';
                     }
 
-                    var fromSocketId = listOfSocket.find(u => u.user === newMessage.from).socketId;
+                    var fromSocketId = listOfSocket.find(u => u.user === from).socketId;
                     socketio.to(toSocketId).to(fromSocketId).emit('receive_message', conversation);
                     successlog.info(`Send message to : ${fromSocketId} and ${toSocketId}`);
                     return resolve({ ok: 200 });
@@ -153,17 +153,16 @@ socketio.on('connect', socket => {
         // {"item":"xxxxxx", "type":"png"}, 
         // {"item":"xxxxxx", "type":"png"}
         // ]
-
-
+        console.log(newMessage.media1);
         if(Array.isArray(newMessage.media1)) {
             var listItem = newMessage.media1;
-            for(let i = 0; i < media1.length; i++){ 
-                console.log(media1[i].item, media1[i].type);
+            for(let i = 0; i < listItem.length; i++){ 
+                console.log(listItem[i].item, listItem[i].type);
 
                 if (i != 0) {
                     newMessage.msg = "";
                 }
-                postSubmitChat (newMessage.from, newMessage.to, newMessage.msg, listItem[i].item, listItem[i].type)
+                postSubmitChat (newMessage.from, newMessage.to, newMessage.msg, listItem[i].item, listItem[i].type, roomName)
                     .then((resolve) => {
                         console.log(resolve);
                     })
@@ -174,7 +173,7 @@ socketio.on('connect', socket => {
             }
 
         } else {
-            postSubmitChat (newMessage.from, newMessage.to, newMessage.msg, newMessage.media1, newMessage.media_type)
+            postSubmitChat (newMessage.from, newMessage.to, newMessage.msg, newMessage.media1, newMessage.media_type, roomName)
             .then((resolve) => {
                 console.log(resolve);
             })
@@ -184,9 +183,6 @@ socketio.on('connect', socket => {
             });
 
         }
-
-
-            
 
 
         // const form = new FormData();

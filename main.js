@@ -12,7 +12,7 @@ var errorlog = require(path.join(__dirname, './utils/logger')).errorlog;
 var successlog = require(path.join(__dirname, './utils/logger')).successlog;
 
 
-var isDebug = true;
+var isDebug = false;
 
 app.get('/', (req, res) => {
     successlog.info(`Node Server is running. Yay!!`);
@@ -187,42 +187,6 @@ socketio.on('connect', socket => {
 
         }
 
-
-        // const form = new FormData();
-        // if (isDebug) { console.log(newMessage); }
-        // form.append('from', newMessage.from);
-        // form.append('to', newMessage.to);
-        // form.append('msg', newMessage.msg);
-        // form.append('media1', newMessage.media1);
-        // form.append('media_type', newMessage.media_type);
-
-        // axios({
-        //         method: 'post',
-        //         url: process.env.SUBMIT_CHAT,
-        //         headers: form.getHeaders(),
-        //         data: form
-        //     })
-        //     .then((resolve) => {
-        //         if (isDebug) { console.log(resolve.data)
-        //         var conversation = resolve.data;
-        //         conversation.room = roomName;
-
-        //         var toSocketId = listOfSocket.find(u => u.user === newMessage.to);
-        //         if (toSocketId) {
-        //             toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
-        //         } else {
-        //             toSocketId = '';
-        //         }
-
-        //         var fromSocketId = listOfSocket.find(u => u.user === newMessage.from).socketId;
-        //         socketio.to(toSocketId).to(fromSocketId).emit('receive_message', conversation);
-        //         successlog.info(`Send message to : ${fromSocketId} and ${toSocketId}`);
-
-        //     })
-        //     .catch((error) => {
-        //         if (isDebug) { console.log('Send Message', error);
-        //         errorlog.error(`Error send_message axios: ${error}`);
-        //   });
     });
 
     socket.on('scroll_max', (room) => {

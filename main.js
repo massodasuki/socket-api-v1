@@ -11,6 +11,9 @@ var path = require('path');
 var errorlog = require(path.join(__dirname, './utils/logger')).errorlog;
 var successlog = require(path.join(__dirname, './utils/logger')).successlog;
 
+
+var isDebug = true;
+
 app.get('/', (req, res) => {
     successlog.info(`Node Server is running. Yay!!`);
     res.send("Node Server is running. Yay!!")
@@ -24,13 +27,13 @@ var listOfSocket = [{
 socketio.on('connect', socket => {
 
     socket.on('join', (room) => {
-        console.log(room);
+        if (isDebug) { console.log(room); }
         var roomA = '' + room.from + '-' + room.to + '';
         var roomB = '' + room.to + '-' + room.from + '';
 
-        // console.log( room.from + ' : ' + socket.id);
+        // if (isDebug) { console.log( room.from + ' : ' + socket.id); }
         const index = listOfSocket.findIndex((u) => u.user === room.from)
-        // console.log(index);
+        // if (isDebug) { console.log(index); }
         if (index == -1) {
             var object = {
                 user: room.from,
@@ -43,16 +46,16 @@ socketio.on('connect', socket => {
                 socketId: socket.id
             }
         }
-        console.log(listOfSocket);
+        if (isDebug) { console.log(listOfSocket); }
 
         // store.put(roomA, 'world');
         var roomName = store.get(roomA) ? store.get(roomA) : store.get(roomB);
         if (roomName) {
-            console.log("Join Room");
+            if (isDebug) { console.log("Join Room"); }
             successlog.info(`Join Room: ${room.from}`);
             socket.join(roomName);
         } else {
-            console.log("Create Room");
+            if (isDebug) { console.log("Create Room"); }
             successlog.info(`Create Room: ${room.from}`);
             var roomUuid = uuid4();
             store.put(roomA, roomUuid);
@@ -77,18 +80,18 @@ socketio.on('connect', socket => {
             .then((resolve) => {
                 conversation = resolve.data;
                 conversation.room = roomName;
-                console.log(conversation);
+                if (isDebug) { console.log(conversation); }
 
-                // console.log(roomName);
+                // if (isDebug) { if (isDebug) { console.log(roomName);
                 // socketio.in(roomName).emit('room', conversation);
                 // socketio.to(roomName).emit('room', conversation);
                 var socketId = listOfSocket.find(u => u.user === room.from).socketId;
                 socketio.to(socketId).emit('room', conversation);
-                console.log('Load all message for : ', socketId);
+                if (isDebug) { console.log('Load all message for : ', socketId); }
                 successlog.info(`Load all message for : ${socketId}`);
             })
             .catch((error) => {
-                console.log(error);
+                if (isDebug) { console.log(error); }
                 errorlog.error(`Error Message : ${error}`)
             });
 
@@ -113,10 +116,10 @@ socketio.on('connect', socket => {
                     data: form
                 })
                 .then((status) => {
-                    // console.log(resolve.data)
+                    // if (isDebug) { console.log(resolve.data) }
                     var conversation = status.data;
                     conversation.room = room_name;
-                    console.log(conversation)
+                    if (isDebug) { console.log(conversation); }
 
                     var toSocketId = listOfSocket.find(u => u.user === to);
                     if (toSocketId) {
@@ -132,7 +135,7 @@ socketio.on('connect', socket => {
 
                 })
                 .catch((error) => {
-                    console.log('Send Message', error);
+                    if (isDebug) { console.log('Send Message', error); }
                     errorlog.error(`Error send_message axios: ${error}`);
                     return reject({ok: 500,  msg: error});
               });
@@ -153,21 +156,21 @@ socketio.on('connect', socket => {
         // {"item":"xxxxxx", "type":"png"}, 
         // {"item":"xxxxxx", "type":"png"}
         // ]
-        console.log(newMessage.media1);
+        if (isDebug) { console.log(newMessage.media1); }
         if(Array.isArray(newMessage.media1)) {
             var listItem = newMessage.media1;
             for(let i = 0; i < listItem.length; i++){ 
-                console.log(listItem[i].item, listItem[i].type);
+                if (isDebug) { console.log(listItem[i].item, listItem[i].type); }
 
                 if (i != 0) {
                     newMessage.msg = "";
                 }
                 postSubmitChat (newMessage.from, newMessage.to, newMessage.msg, listItem[i].item, listItem[i].type, roomName)
                     .then((resolve) => {
-                        console.log(resolve);
+                        if (isDebug) { console.log(resolve); }
                     })
                     .catch((error) => {
-                        console.log(error);
+                        if (isDebug) { console.log(error); }
                         errorlog.error(`Error Message : ${error}`)
                     });
             }
@@ -175,10 +178,10 @@ socketio.on('connect', socket => {
         } else {
             postSubmitChat (newMessage.from, newMessage.to, newMessage.msg, newMessage.media1, newMessage.media_type, roomName)
             .then((resolve) => {
-                console.log(resolve);
+                if (isDebug) { console.log(resolve); }
             })
             .catch((error) => {
-                console.log(error);
+                if (isDebug) { console.log(error); }
                 errorlog.error(`Error Message : ${error}`)
             });
 
@@ -186,7 +189,7 @@ socketio.on('connect', socket => {
 
 
         // const form = new FormData();
-        // console.log(newMessage);
+        // if (isDebug) { console.log(newMessage); }
         // form.append('from', newMessage.from);
         // form.append('to', newMessage.to);
         // form.append('msg', newMessage.msg);
@@ -200,7 +203,7 @@ socketio.on('connect', socket => {
         //         data: form
         //     })
         //     .then((resolve) => {
-        //         console.log(resolve.data)
+        //         if (isDebug) { console.log(resolve.data)
         //         var conversation = resolve.data;
         //         conversation.room = roomName;
 
@@ -217,7 +220,7 @@ socketio.on('connect', socket => {
 
         //     })
         //     .catch((error) => {
-        //         console.log('Send Message', error);
+        //         if (isDebug) { console.log('Send Message', error);
         //         errorlog.error(`Error send_message axios: ${error}`);
         //   });
     });
@@ -225,7 +228,7 @@ socketio.on('connect', socket => {
     socket.on('scroll_max', (room) => {
         var roomName = room.room;
 
-        // console.log(socket.id);
+        // if (isDebug) { console.log(socket.id); }
 
         const form = new FormData();
         form.append('my_id', room.from);
@@ -240,17 +243,17 @@ socketio.on('connect', socket => {
             })
             .then((resolve) => {
                 conversation = resolve.data;
-                // console.log(conversation);
+                // if (isDebug) { console.log(conversation); }
                 conversation.room = roomName;
 
-                // console.log(roomName);
+                // if (isDebug) { console.log(roomName); }
                 var socketId = listOfSocket.find(u => u.user === room.from).socketId;
                 socketio.to(socketId).emit('room', conversation);
-                console.log('Scrolling by : ', socketId);
+                if (isDebug) { console.log('Scrolling by : ', socketId); }
                 successlog.info(`Scrolling by : ${socketId}`);
             })
-            .catch((error) => {
-                console.log(error);
+            .catch((error) => { 
+                if (isDebug) { console.log(error); }
                 errorlog.error(`Error scroll_max axios : ${error}`);
             });
     })
@@ -262,7 +265,7 @@ socketio.on('connect', socket => {
         var roomName = parseInt(room.room);
 
         socket.join(roomName);
-        console.log(roomName);
+        if (isDebug) { console.log(roomName); }
 
         const form = new FormData();
         form.append('room', roomName);
@@ -293,11 +296,11 @@ socketio.on('connect', socket => {
                 conversation.roomName = roomName;
                 conversation.socketId = socket.id;
 
-                console.log(conversation);
+                if (isDebug) { console.log(conversation); }
                 socketio.to(socket.id).emit('group_room', conversation);
             })
             .catch((error) => {
-                console.log(error);
+                if (isDebug) { console.log(error); }
                 errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
             });
 
@@ -307,7 +310,7 @@ socketio.on('connect', socket => {
         var roomName = parseInt(newMessage.room);
 
         const form = new FormData();
-        console.log(newMessage);
+        if (isDebug) { console.log(newMessage); }
         form.append('from', newMessage.from);
         form.append('to', newMessage.to);
         form.append('room', roomName);
@@ -322,7 +325,7 @@ socketio.on('connect', socket => {
                 data: form
             })
             .then((resolve) => {
-                console.log(resolve.data);
+                if (isDebug) { console.log(resolve.data); }
                 var conversation = resolve.data;
                 conversation.room = roomName;
 
@@ -330,13 +333,13 @@ socketio.on('connect', socket => {
                 successlog.info(`Send message to : ${roomName}`);
             })
             .catch((error) => {
-                console.log(error);
+                if (isDebug) { console.log(error); }
                 errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
             });
     });
 
     socket.on('scroll_max_group', (room) => {
-        // console.log(room);
+        // if (isDebug) { console.log(room); }
         var roomName = parseInt(room.room);
         var socketId;
 
@@ -376,11 +379,11 @@ socketio.on('connect', socket => {
                 }
                 conversation.data = messageList;
 
-                console.log(conversation);
+                if (isDebug) { console.log(conversation); }
                 socketio.to(socketId).emit('group_room', conversation);
             })
             .catch((error) => {
-                console.log(error);
+                if (isDebug) { console.log(error); }
                 errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
             });
 
@@ -391,7 +394,7 @@ socketio.on('connect', socket => {
 
         if (userId) {
             var userId = listOfSocket.find(u => u.socketId === socket.id).user;
-            console.log('disconnecting ' + userId);
+            if (isDebug) { console.log('disconnecting ' + userId); }
             successlog.info(`disconnecting: ${userId}`);
         }
 
@@ -402,7 +405,7 @@ socketio.on('connect', socket => {
 
         if (userId) {
             var userId = listOfSocket.find(u => u.socketId === socket.id).user;
-            console.log('disconnect ' + userId);
+            if (isDebug) { console.log('disconnect ' + userId); }
             successlog.info(`disconnect: ${userId}`);
         }
     });
@@ -420,7 +423,7 @@ const logger = winston.createLogger({
 process.on('uncaughtException', err => {
     logger.error('There was an uncaught exception: ', err);
     console.error(err && err.stack);
-    console.log('Continue Listening')
+    console.log('Continue Listening');
     //logger.on('finish', () => process.exit());
     logger.end();
 });

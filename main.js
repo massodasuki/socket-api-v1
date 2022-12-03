@@ -148,14 +148,6 @@ socketio.on('connect', socket => {
     socket.on('send_message', (newMessage) => {
         var roomName = newMessage.room;
 
-
-        //         media1 = [
-        // {"item":"xxxxxx", "type":"png"}, 
-        // {"item":"xxxxxx", "type":"png"}, 
-        // {"item":"xxxxxx", "type":"png"}, 
-        // {"item":"xxxxxx", "type":"png"}, 
-        // {"item":"xxxxxx", "type":"png"}
-        // ]
         if (isDebug) { console.log(newMessage.media1); }
         if(Array.isArray(newMessage.media1)) {
             var listItem = newMessage.media1;
@@ -270,36 +262,106 @@ socketio.on('connect', socket => {
 
     });
 
+
+    function postSubmitGroupChat (from, to, msg, media1, media_type, room_name) {
+        return new Promise(function(resolve, reject) {
+
+            const form = new FormData();
+
+            form.append('from', from);
+            form.append('to', to);
+            form.append('room', room_name);
+            form.append('msg', msg);
+            form.append('media1', media1);
+            form.append('media_type', media_type);
+
+            axios({
+                    method: 'post',
+                    url: process.env.SUBMIT_GROUP_CHAT,
+                    headers: form.getHeaders(),
+                    data: form
+                })
+                .then((resolve) => {
+                    if (isDebug) { console.log(resolve.data); }
+                    console.log(resolve.data);
+                    var conversation = resolve.data;
+                    conversation.room = room_name;
+
+                    socketio.in(room_name).emit('receive_group_message', conversation);
+                    successlog.info(`Send message to : ${room_name}`);
+                })
+                .catch((error) => {
+                    if (isDebug) { console.log(error); }
+                    console.log(error);
+                    errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
+                });
+                        
+        })
+    }
+
     socket.on('send_message_group', (newMessage) => {
         var roomName = parseInt(newMessage.room);
 
-        const form = new FormData();
-        if (isDebug) { console.log(newMessage); }
-        form.append('from', newMessage.from);
-        form.append('to', newMessage.to);
-        form.append('room', roomName);
-        form.append('msg', newMessage.msg);
-        form.append('media1', newMessage.media1);
-        form.append('media_type', newMessage.media_type);
 
-        axios({
-                method: 'post',
-                url: process.env.SUBMIT_GROUP_CHAT,
-                headers: form.getHeaders(),
-                data: form
-            })
+        if (isDebug) { console.log(newMessage.media1); }
+        if(Array.isArray(newMessage.media1)) {
+            var listItem = newMessage.media1;
+            for(let i = 0; i < listItem.length; i++){ 
+                if (isDebug) { console.log(listItem[i].item, listItem[i].type); }
+
+                if (i != 0) {
+                    newMessage.msg = "";
+                }
+                postSubmitGroupChat (newMessage.from, newMessage.to, newMessage.msg, listItem[i].item, listItem[i].type, roomName)
+                    .then((resolve) => {
+                        if (isDebug) { console.log(resolve); }
+                    })
+                    .catch((error) => {
+                        if (isDebug) { console.log(error); }
+                        errorlog.error(`Error Message : ${error}`)
+                    });
+            }
+
+        } else {
+            postSubmitGroupChat (newMessage.from, newMessage.to, newMessage.msg, newMessage.media1, newMessage.media_type, roomName)
             .then((resolve) => {
-                if (isDebug) { console.log(resolve.data); }
-                var conversation = resolve.data;
-                conversation.room = roomName;
-
-                socketio.in(roomName).emit('receive_group_message', conversation);
-                successlog.info(`Send message to : ${roomName}`);
+                if (isDebug) { console.log(resolve); }
             })
             .catch((error) => {
                 if (isDebug) { console.log(error); }
-                errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
+                console.log(error);
+                errorlog.error(`Error Message : ${error}`)
             });
+
+        }
+
+        // const form = new FormData();
+        // if (isDebug) { console.log(newMessage); }
+        // form.append('from', newMessage.from);
+        // form.append('to', newMessage.to);
+        // form.append('room', roomName);
+        // form.append('msg', newMessage.msg);
+        // form.append('media1', newMessage.media1);
+        // form.append('media_type', newMessage.media_type);
+
+        // axios({
+        //         method: 'post',
+        //         url: process.env.SUBMIT_GROUP_CHAT,
+        //         headers: form.getHeaders(),
+        //         data: form
+        //     })
+        //     .then((resolve) => {
+        //         if (isDebug) { console.log(resolve.data); }
+        //         var conversation = resolve.data;
+        //         conversation.room = roomName;
+
+        //         socketio.in(roomName).emit('receive_group_message', conversation);
+        //         successlog.info(`Send message to : ${roomName}`);
+        //     })
+        //     .catch((error) => {
+        //         if (isDebug) { console.log(error); }
+        //         errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
+        //     });
     });
 
     socket.on('scroll_max_group', (room) => {

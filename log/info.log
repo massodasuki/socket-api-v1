@@ -1906,3 +1906,117 @@
   service: 'user-service',
   timestamp: '2022-11-08T16:38:04.234Z'
 }
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T17:02:59.703Z'
+}
+{
+  message: 'Load all message for : AvG44NrkEEgtWAVoAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T17:03:02.254Z'
+}
+{
+  message: 'Send message to : AvG44NrkEEgtWAVoAAAA and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T17:03:02.289Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T17:05:25.257Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T17:05:25.257Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T17:05:28.577Z'
+}
+{
+  message: 'Load all message for : 43zZR_oK-iAyQep1AAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T17:05:29.828Z'
+}
+{
+  message: 'Send message to : 43zZR_oK-iAyQep1AAAB and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T17:05:30.471Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T17:49:38.272Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-08T17:49:38.275Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-15T17:57:50.886Z'
+}
+{
+  message: 'Load all message for : e4qUZ3K2mdsXUwi1AAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-15T17:57:51.995Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-15T17:59:12.881Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-15T17:59:12.882Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-15T17:59:13.601Z'
+}
+{
+  message: 'Load all message for : Ud-xNpzYRwBKeRCyAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-15T17:59:14.755Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-15T18:03:04.921Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-11-15T18:03:04.922Z'
+}
+{
+  message: 'Send message to : 5',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2022-12-03T15:41:30.515Z'
+}

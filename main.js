@@ -334,34 +334,6 @@ socketio.on('connect', socket => {
             });
 
         }
-
-        // const form = new FormData();
-        // if (isDebug) { console.log(newMessage); }
-        // form.append('from', newMessage.from);
-        // form.append('to', newMessage.to);
-        // form.append('room', roomName);
-        // form.append('msg', newMessage.msg);
-        // form.append('media1', newMessage.media1);
-        // form.append('media_type', newMessage.media_type);
-
-        // axios({
-        //         method: 'post',
-        //         url: process.env.SUBMIT_GROUP_CHAT,
-        //         headers: form.getHeaders(),
-        //         data: form
-        //     })
-        //     .then((resolve) => {
-        //         if (isDebug) { console.log(resolve.data); }
-        //         var conversation = resolve.data;
-        //         conversation.room = roomName;
-
-        //         socketio.in(roomName).emit('receive_group_message', conversation);
-        //         successlog.info(`Send message to : ${roomName}`);
-        //     })
-        //     .catch((error) => {
-        //         if (isDebug) { console.log(error); }
-        //         errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
-        //     });
     });
 
     socket.on('scroll_max_group', (room) => {

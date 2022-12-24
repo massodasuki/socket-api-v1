@@ -10,6 +10,7 @@ const store = new Storage('path/to/file');
 var path = require('path');
 var errorlog = require(path.join(__dirname, './utils/logger')).errorlog;
 var successlog = require(path.join(__dirname, './utils/logger')).successlog;
+var telegram = require( path.resolve( __dirname, "./utils/telegram.js" ) );
 
 
 var isDebug = false;
@@ -24,6 +25,7 @@ var listOfSocket = [{
     user: 'null',
     socketId: 'null'
 }];
+
 socketio.on('connect', socket => {
 
     socket.on('join', (room) => {
@@ -93,6 +95,7 @@ socketio.on('connect', socket => {
             .catch((error) => {
                 if (isDebug) { console.log(error); }
                 errorlog.error(`Error Message : ${error}`)
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error join : ${error}`);
             });
 
 
@@ -137,6 +140,7 @@ socketio.on('connect', socket => {
                 .catch((error) => {
                     if (isDebug) { console.log('Send Message', error); }
                     errorlog.error(`Error send_message axios: ${error}`);
+                    telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error postSubmitChat : ${error}`);
                     return reject({ok: 500,  msg: error});
               });
                         
@@ -164,6 +168,7 @@ socketio.on('connect', socket => {
                     .catch((error) => {
                         if (isDebug) { console.log(error); }
                         errorlog.error(`Error Message : ${error}`)
+                        telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error Array.isArray send_message : ${error}`);
                     });
             }
 
@@ -174,7 +179,8 @@ socketio.on('connect', socket => {
             })
             .catch((error) => {
                 if (isDebug) { console.log(error); }
-                errorlog.error(`Error Message : ${error}`)
+                errorlog.error(`Error Message : ${error}`);
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error send_message : ${error}`);
             });
 
         }
@@ -211,6 +217,7 @@ socketio.on('connect', socket => {
             .catch((error) => { 
                 if (isDebug) { console.log(error); }
                 errorlog.error(`Error scroll_max axios : ${error}`);
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error scroll_max : ${error}`);
             });
     })
 
@@ -258,6 +265,7 @@ socketio.on('connect', socket => {
             .catch((error) => {
                 if (isDebug) { console.log(error); }
                 errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error join_group : ${error}`);
             });
 
     });
@@ -294,6 +302,7 @@ socketio.on('connect', socket => {
                     if (isDebug) { console.log(error); }
                     console.log(error);
                     errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
+                    telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error postSubmitGroupChat : ${error}`);
                 });
                         
         })
@@ -319,6 +328,7 @@ socketio.on('connect', socket => {
                     .catch((error) => {
                         if (isDebug) { console.log(error); }
                         errorlog.error(`Error Message : ${error}`)
+                        telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error Array.isArray postSubmitGroupChat loop : ${error}`);
                     });
             }
 
@@ -331,6 +341,7 @@ socketio.on('connect', socket => {
                 if (isDebug) { console.log(error); }
                 console.log(error);
                 errorlog.error(`Error Message : ${error}`)
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error send_message_group postSubmitGroupChat : ${error}`);
             });
 
         }
@@ -383,6 +394,7 @@ socketio.on('connect', socket => {
             .catch((error) => {
                 if (isDebug) { console.log(error); }
                 errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error scroll_max_group : ${error}`);
             });
 
     })
@@ -421,6 +433,7 @@ const logger = winston.createLogger({
 process.on('uncaughtException', err => {
     logger.error('There was an uncaught exception: ', err);
     console.error(err && err.stack);
+    telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error uncaughtException : ${err}`);
     console.log('Continue Listening');
     //logger.on('finish', () => process.exit());
     logger.end();

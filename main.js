@@ -17,6 +17,8 @@ var isDebug = false;
 
 app.get('/', (req, res) => {
     successlog.info(`Node Server is running. Yay!!`);
+    var run = "running";
+    telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Node server : ${run}`);
     res.send("Node Server is running. Yay!!")
 })
 

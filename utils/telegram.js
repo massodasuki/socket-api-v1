@@ -5,14 +5,14 @@ function sendMessageTL (tokenBot, chatId, message) {
         `https://api.telegram.org/bot${tokenBot}/sendMessage`,
         {
             chat_id: chatId,
-            text: `Error : ${message}`
+            text: `Seccast : ${message}`
         }
         )
         .then(response => {
-            console.log('Message posted');
+            // console.log('Message posted');
         })
         .catch(err => {
-            console.log('Error :', err);
+            // console.log('Error :', err);
         })
 }
 

@@ -34,3 +34,447 @@
   service: 'user-service',
   timestamp: '2022-10-27T15:25:31.604Z'
 }
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:12.352Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:12.358Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:44.934Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:44.940Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:27:39.761Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:27:39.768Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:27:46.976Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:27:46.979Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:33:04.287Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:33:25.436Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:41:54.675Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:41:54.697Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:42:01.633Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:42:01.639Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:42:17.196Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:42:17.201Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:42:24.609Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:43:09.707Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:43:42.171Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:43:50.618Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:43:50.621Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:43:58.541Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:43:58.545Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:44:06.827Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:44:12.495Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:44:12.500Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:44:35.798Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:44:48.165Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:44:51.812Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:44:51.816Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:44:56.480Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:45:06.781Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:45:06.784Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:45:24.577Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:45:24.581Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:45:33.272Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:45:33.276Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:45:44.407Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:45:44.412Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:46:13.539Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:46:13.543Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:46:19.282Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:46:19.284Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:46:36.322Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:46:36.326Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:48:03.154Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:48:08.657Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:48:08.659Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:48:17.508Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:48:17.512Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:52:16.947Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:52:16.950Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:52:40.946Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:52:55.358Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:53:50.844Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:53:50.848Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:54:21.854Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:54:21.857Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:54:27.106Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:54:27.108Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:55:02.738Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:55:02.744Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:55:11.504Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:55:11.508Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:56:01.190Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:56:01.194Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:57:56.940Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:58:06.637Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:58:12.086Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:58:12.090Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:59:25.117Z'
+}
+{
+  message: 'Error Message : ReferenceError: socketId is not defined',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:00:04.946Z'
+}
+{
+  message: 'Error send_message axios: AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:00:50.460Z'
+}
+{
+  message: 'Error Message : [object Object]',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:00:50.466Z'
+}

@@ -1,0 +1,1002 @@
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:23:06.042Z'
+}
+{
+  message: 'Load all message for : FS9BB6IR6af752U5AAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:23:06.344Z'
+}
+{
+  message: 'Create Room: 16',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:23:30.419Z'
+}
+{
+  message: 'Load all message for : RMBqi103Z15OyyFmAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:23:30.624Z'
+}
+{
+  message: 'Join Room: 16',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:23:38.769Z'
+}
+{
+  message: 'Load all message for : RMBqi103Z15OyyFmAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:23:38.995Z'
+}
+{
+  message: 'Send message to : RMBqi103Z15OyyFmAAAB and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:24:03.700Z'
+}
+{
+  message: 'Send message to : RMBqi103Z15OyyFmAAAB and ',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:24:14.015Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:24:30.508Z'
+}
+{
+  message: 'Load all message for : GsnbrDYotjTsP1ipAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:24:30.687Z'
+}
+{
+  message: 'Send message to : RMBqi103Z15OyyFmAAAB and GsnbrDYotjTsP1ipAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:24:37.196Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:24:55.001Z'
+}
+{
+  message: 'Load all message for : FS9BB6IR6af752U5AAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:24:55.216Z'
+}
+{
+  message: 'Send message to : FS9BB6IR6af752U5AAAA and GsnbrDYotjTsP1ipAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T10:25:02.230Z'
+}
+{
+  message: 'disconnecting: 16',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T13:22:16.730Z'
+}
+{
+  message: 'disconnect: 16',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T13:22:16.731Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T13:34:56.715Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T13:34:56.715Z'
+}
+{
+  message: 'Join Room: 16',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:39:34.661Z'
+}
+{
+  message: 'Load all message for : YYLfP7M-Zd5y1_AAAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:39:34.980Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:39:49.816Z'
+}
+{
+  message: 'Load all message for : sXAcz5FmjlRjgYtCAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:39:50.011Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:40:05.908Z'
+}
+{
+  message: 'Load all message for : N6ikfR94t0SYhEMMAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:40:06.149Z'
+}
+{
+  message: 'Send message to : N6ikfR94t0SYhEMMAAAC and sXAcz5FmjlRjgYtCAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:40:22.154Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:40:31.374Z'
+}
+{
+  message: 'Load all message for : sXAcz5FmjlRjgYtCAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:40:31.582Z'
+}
+{
+  message: 'Send message to : N6ikfR94t0SYhEMMAAAC and sXAcz5FmjlRjgYtCAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:40:44.735Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:40:47.612Z'
+}
+{
+  message: 'Load all message for : sXAcz5FmjlRjgYtCAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:40:47.829Z'
+}
+{
+  message: 'Send message to : N6ikfR94t0SYhEMMAAAC and sXAcz5FmjlRjgYtCAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:40:54.484Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:41:00.494Z'
+}
+{
+  message: 'Load all message for : y8i6Z-nzRyfJ_7cRAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:41:00.727Z'
+}
+{
+  message: 'Send message to : N6ikfR94t0SYhEMMAAAC and y8i6Z-nzRyfJ_7cRAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:41:30.069Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:41:41.837Z'
+}
+{
+  message: 'Load all message for : sXAcz5FmjlRjgYtCAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:41:42.085Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:41:42.423Z'
+}
+{
+  message: 'Load all message for : sXAcz5FmjlRjgYtCAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:41:42.615Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:41:53.394Z'
+}
+{
+  message: 'Load all message for : N6ikfR94t0SYhEMMAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:41:53.621Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:43:21.084Z'
+}
+{
+  message: 'Load all message for : vr8Z-B4QDeNBBgSkAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:43:21.379Z'
+}
+{
+  message: 'Create Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:43:35.463Z'
+}
+{
+  message: 'Load all message for : vr8Z-B4QDeNBBgSkAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:43:35.759Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:43:39.083Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:43:39.084Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:43:45.108Z'
+}
+{
+  message: 'Load all message for : QT1AeX5TV_9yEllqAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:43:45.378Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:02.923Z'
+}
+{
+  message: 'Load all message for : tVAGl9CCrn6QYfe5AAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:03.111Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:20.352Z'
+}
+{
+  message: 'Load all message for : QT1AeX5TV_9yEllqAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:20.607Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:26.063Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:26.064Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:31.830Z'
+}
+{
+  message: 'Load all message for : N793fKuBBmkq31DcAAAG',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:44:32.074Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:45:24.646Z'
+}
+{
+  message: 'Load all message for : N793fKuBBmkq31DcAAAG',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:45:24.946Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:45:25.150Z'
+}
+{
+  message: 'Load all message for : N793fKuBBmkq31DcAAAG',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:45:25.945Z'
+}
+{
+  message: 'Send message to : N793fKuBBmkq31DcAAAG and tVAGl9CCrn6QYfe5AAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:45:32.700Z'
+}
+{
+  message: 'Send message to : N793fKuBBmkq31DcAAAG and tVAGl9CCrn6QYfe5AAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:45:45.753Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:46:23.453Z'
+}
+{
+  message: 'Load all message for : XhlXgN2vIaMJneN_AAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:46:23.743Z'
+}
+{
+  message: 'Join Room: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:48:28.895Z'
+}
+{
+  message: 'Load all message for : 6pa4uFCCIBrUfAauAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:48:29.122Z'
+}
+{
+  message: 'Send message to : XhlXgN2vIaMJneN_AAAA and 6pa4uFCCIBrUfAauAAAE',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:48:35.337Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:49:51.867Z'
+}
+{
+  message: 'Load all message for : eaXfv9Ru_XEH03mFAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:49:52.211Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:50:24.446Z'
+}
+{
+  message: 'Load all message for : yWOy5rTsIeSajnjXAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:50:24.756Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:50:24.912Z'
+}
+{
+  message: 'Load all message for : yWOy5rTsIeSajnjXAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:50:25.133Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:50:27.541Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:50:27.542Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:50:33.562Z'
+}
+{
+  message: 'Load all message for : OLPrLK2Lzv7wQ9dQAAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:50:33.765Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:51:49.603Z'
+}
+{
+  message: 'Load all message for : OLPrLK2Lzv7wQ9dQAAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:51:49.859Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:51:50.235Z'
+}
+{
+  message: 'Load all message for : OLPrLK2Lzv7wQ9dQAAAF',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:51:50.443Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:52:23.535Z'
+}
+{
+  message: 'Load all message for : L6X4A_myVNtRXTVxAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:52:23.859Z'
+}
+{
+  message: 'Join Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:53:19.463Z'
+}
+{
+  message: 'Load all message for : 0QfeSG5Y_q_9I64GAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:53:19.797Z'
+}
+{
+  message: 'Create Room: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:53:33.368Z'
+}
+{
+  message: 'Load all message for : 0QfeSG5Y_q_9I64GAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T14:53:33.566Z'
+}
+{
+  message: 'Load all message for : yW16AF9RI9kWNaIFAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:07:25.409Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:07:36.374Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:07:36.375Z'
+}
+{
+  message: 'Load all message for : sqqEnLRIkJUCf78XAAAH',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:07:54.333Z'
+}
+{
+  message: 'Load all message for : sqqEnLRIkJUCf78XAAAH',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:08:01.200Z'
+}
+{
+  message: 'Load all message for : sqqEnLRIkJUCf78XAAAH',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:08:42.287Z'
+}
+{
+  message: 'Load all message for : mV0s1zXxr6L5sWrgAAAG',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:08:53.714Z'
+}
+{
+  message: 'Load all message for : mV0s1zXxr6L5sWrgAAAG',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:08:58.726Z'
+}
+{
+  message: 'Load all message for : biXp6Ung77lARErUAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:09:38.427Z'
+}
+{
+  message: 'Load all message for : biXp6Ung77lARErUAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:09:42.479Z'
+}
+{
+  message: 'Load all message for : biXp6Ung77lARErUAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:09:49.943Z'
+}
+{
+  message: 'Load all message for : biXp6Ung77lARErUAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:09:51.182Z'
+}
+{
+  message: 'Load all message for : OctVVoFDYT1KbxJjAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:12:18.774Z'
+}
+{
+  message: 'Load all message for : OctVVoFDYT1KbxJjAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:12:20.431Z'
+}
+{
+  message: 'Load all message for : OctVVoFDYT1KbxJjAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:12:27.095Z'
+}
+{
+  message: 'Load all message for : OctVVoFDYT1KbxJjAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:12:29.779Z'
+}
+{
+  message: 'Load all message for : Q3e2vJKdivtFLj6lAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:12:58.688Z'
+}
+{
+  message: 'Load all message for : Q3e2vJKdivtFLj6lAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:13:00.249Z'
+}
+{
+  message: 'Load all message for : Q3e2vJKdivtFLj6lAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:13:02.244Z'
+}
+{
+  message: 'Load all message for : gZ6b7Vw5iIe46oMnAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:16:15.873Z'
+}
+{
+  message: 'Load all message for : gZ6b7Vw5iIe46oMnAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:16:17.678Z'
+}
+{
+  message: 'Load all message for : gZ6b7Vw5iIe46oMnAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:16:18.635Z'
+}
+{
+  message: 'Load all message for : XjqsZsFOdXMsBlzLAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:19:34.649Z'
+}
+{
+  message: 'Load all message for : BLtRnMYXUZSbHQ1BAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:20:24.776Z'
+}
+{
+  message: 'Load all message for : CiRCqUZgYKCfSbF-AAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:21:19.155Z'
+}
+{
+  message: 'Load all message for : CiRCqUZgYKCfSbF-AAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:21:21.545Z'
+}
+{
+  message: 'Load all message for : CiRCqUZgYKCfSbF-AAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:21:22.881Z'
+}
+{
+  message: 'Load all message for : CiRCqUZgYKCfSbF-AAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:21:25.819Z'
+}
+{
+  message: 'Load all message for : JWoUlNnYyX69QTntAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:22:18.976Z'
+}
+{
+  message: 'Load all message for : JWoUlNnYyX69QTntAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:22:21.788Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:22:38.652Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:22:38.653Z'
+}
+{
+  message: 'Load all message for : -6JeKLtg2vqZui26AAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:22:54.088Z'
+}
+{
+  message: 'Load all message for : -6JeKLtg2vqZui26AAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:22:57.261Z'
+}
+{
+  message: 'Load all message for : N6EDtBDXm4vrPmirAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:23:54.137Z'
+}
+{
+  message: 'Load all message for : N6EDtBDXm4vrPmirAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:23:54.926Z'
+}
+{
+  message: 'Load all message for : N6EDtBDXm4vrPmirAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:23:57.126Z'
+}
+{
+  message: 'Load all message for : Xeb2Qfe3kB0N0fxhAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:26:08.652Z'
+}
+{
+  message: 'Load all message for : Xeb2Qfe3kB0N0fxhAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:26:10.427Z'
+}
+{
+  message: 'Load all message for : Xeb2Qfe3kB0N0fxhAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:26:14.678Z'
+}
+{
+  message: 'Load all message for : Xeb2Qfe3kB0N0fxhAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:26:15.677Z'
+}
+{
+  message: 'Load all message for : Zkz-9aZ4VQ0ZH0GkAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:27:05.576Z'
+}
+{
+  message: 'Load all message for : Zkz-9aZ4VQ0ZH0GkAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:27:05.759Z'
+}
+{
+  message: 'Load all message for : XcdGvi4G9-VU7kmxAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:27:18.909Z'
+}
+{
+  message: 'Send message to : YyoFQMchf3wXq6joAAAH and osNb8DZbGdwO0XcAAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:33:40.293Z'
+}
+{
+  message: 'Send message to : YyoFQMchf3wXq6joAAAH and osNb8DZbGdwO0XcAAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:33:49.789Z'
+}
+{
+  message: 'Send message to : YyoFQMchf3wXq6joAAAH and osNb8DZbGdwO0XcAAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:34:12.892Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:42:19.301Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:42:19.302Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:42:47.544Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:42:47.545Z'
+}
+{
+  message: 'Send message to : 2797f4a4-a00d-4c34-87c8-f480fe668fc0 or 53e69fcf-413c-4844-91e5-e3ccbb96719d',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:43:15.438Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:44:22.166Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:44:22.166Z'
+}
+{
+  message: 'Send message to : 53e69fcf-413c-4844-91e5-e3ccbb96719d or 53e69fcf-413c-4844-91e5-e3ccbb96719d',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:45:00.952Z'
+}
+{
+  message: 'Send message to : 53e69fcf-413c-4844-91e5-e3ccbb96719d or 53e69fcf-413c-4844-91e5-e3ccbb96719d',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:46:06.337Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:48:00.290Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:48:00.290Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:52:35.850Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:52:35.850Z'
+}
+{
+  message: 'Send message to : 53e69fcf-413c-4844-91e5-e3ccbb96719d or 53e69fcf-413c-4844-91e5-e3ccbb96719d',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:53:21.393Z'
+}
+{
+  message: 'Send message to : 53e69fcf-413c-4844-91e5-e3ccbb96719d or 53e69fcf-413c-4844-91e5-e3ccbb96719d',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:53:38.018Z'
+}
+{
+  message: 'Send message to : 53e69fcf-413c-4844-91e5-e3ccbb96719d or 53e69fcf-413c-4844-91e5-e3ccbb96719d',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:54:10.395Z'
+}
+{
+  message: 'Send message to : 53e69fcf-413c-4844-91e5-e3ccbb96719d or 53e69fcf-413c-4844-91e5-e3ccbb96719d',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:55:50.027Z'
+}
+{
+  message: 'disconnecting: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:58:01.351Z'
+}
+{
+  message: 'disconnect: 17',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T15:58:01.351Z'
+}
+{
+  message: 'Load all message for : Xj78rnu0lUVIAzCoAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:00:25.424Z'
+}
+{
+  message: 'Load all message for : sqhd8MYJjfkuL7LDAAAA',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:00:39.373Z'
+}
+{
+  message: 'Load all message for : cXHehgIT2t5JvxYBAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:01:12.232Z'
+}
+{
+  message: 'Send message to : 76712a47-9ffb-47f2-a4da-663d38c9e73e or 76712a47-9ffb-47f2-a4da-663d38c9e73e',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:01:15.844Z'
+}
+{
+  message: 'Load all message for : cXHehgIT2t5JvxYBAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:02:32.295Z'
+}
+{
+  message: 'disconnecting: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:02:37.035Z'
+}
+{
+  message: 'disconnect: 19',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:02:37.036Z'
+}
+{
+  message: 'Load all message for : 6Rf7uglyDsfxENskAAAC',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:02:40.757Z'
+}
+{
+  message: 'Load all message for : LprnPVqRoq-DVE8QAAAD',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:03:00.157Z'
+}
+{
+  message: 'Send message to : 1ae3abcf-b69f-4099-bc40-0e4941cc434f or 1ae3abcf-b69f-4099-bc40-0e4941cc434f',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:03:11.883Z'
+}
+{
+  message: 'Send message to : 1ae3abcf-b69f-4099-bc40-0e4941cc434f or 1ae3abcf-b69f-4099-bc40-0e4941cc434f',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:03:25.241Z'
+}
+{
+  message: 'Send message to : 1ae3abcf-b69f-4099-bc40-0e4941cc434f or 1ae3abcf-b69f-4099-bc40-0e4941cc434f',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:03:48.852Z'
+}
+{
+  message: 'Load all message for : iKv_OvHjtegXKfhUAAAB',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:06:03.084Z'
+}
+{
+  message: 'Send message to : cab21401-b139-47a6-9879-762c60e2bfa2 or cab21401-b139-47a6-9879-762c60e2bfa2',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2023-01-09T16:06:54.645Z'
+}

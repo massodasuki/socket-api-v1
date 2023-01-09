@@ -215,8 +215,8 @@ socketio.on('connect', socket => {
                 // if (isDebug) { console.log(roomName); }
 
                 socketio.to(socket.id).emit('room', conversation);
-                if (isDebug) { console.log('Scrolling by : ', socketId); }
-                successlog.info(`Scrolling by : ${socketId}`);
+                if (isDebug) { console.log('Scrolling by : ', socket.id); }
+                successlog.info(`Scrolling by : ${socket.id}`);
             })
             .catch((error) => { 
                 if (isDebug) { console.log(error); }
@@ -407,24 +407,17 @@ socketio.on('connect', socket => {
     })
 
     socket.on("disconnecting", () => {
-        var userId = listOfSocket.find(u => u.socketId === socket.id);
-
-        if (userId) {
-            var userId = listOfSocket.find(u => u.socketId === socket.id).user;
-            if (isDebug) { console.log('disconnecting ' + userId); }
-            successlog.info(`disconnecting: ${userId}`);
-        }
+        if (isDebug) { console.log('disconnecting ' + socket.id); }
+        successlog.info(`disconnecting: ${socket.id}`);
+        
 
     });
 
     socket.on("disconnect", () => {
-        var userId = listOfSocket.find(u => u.socketId === socket.id);
-
-        if (userId) {
-            var userId = listOfSocket.find(u => u.socketId === socket.id).user;
-            if (isDebug) { console.log('disconnect ' + userId); }
-            successlog.info(`disconnect: ${userId}`);
-        }
+        
+        if (isDebug) { console.log('disconnect ' + socket.id); }
+        successlog.info(`disconnect: ${socket.id}`);
+        
     });
 
 });

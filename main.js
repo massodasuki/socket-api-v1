@@ -22,12 +22,6 @@ app.get('/', (req, res) => {
 })
 
 
-// var listOfSocket = [{
-//     user: 'null',
-//     socketId: 'null'
-// }];
-
-
 var listOfRooms = [{
     room: 'null',
     users: [ { id: null }]
@@ -39,25 +33,6 @@ socketio.on('connect', socket => {
     socket.on('join', (room) => {
         
         if (isDebug) { console.log(room); }
-        // var roomA = '' + room.from + '-' + room.to + '';
-        // var roomB = '' + room.to + '-' + room.from + '';
-
-        // if (isDebug) { console.log( room.from + ' : ' + socket.id); }
-        // const index = listOfSocket.findIndex((u) => u.user === room.from)
-        // // if (isDebug) { console.log(index); }
-        // if (index == -1) {
-        //     var object = {
-        //         user: room.from,
-        //         socketId: socket.id
-        //     };
-        //     listOfSocket.push(object);
-        // } else {
-        //     listOfSocket[index] = {
-        //         user: room.from,
-        //         socketId: socket.id
-        //     }
-        // }
-        // if (isDebug) { console.log(listOfSocket); }
 
         // find room between two user
         // console.log(listOfRooms);
@@ -88,54 +63,6 @@ socketio.on('connect', socket => {
         }
         socket.join(roomName);
 
-        // store.put(roomA, 'world');
-        // var roomName = store.get(roomA) ? store.get(roomA) : store.get(roomB);
-        // if (roomName) {
-        //     console.log("join 2");
-        //     if (isDebug) { console.log("Join Room"); }
-        //     successlog.info(`Join Room: ${room.from}`);
-        //     socket.join(roomName);
-        // } else {
-        //     console.log("join 3");
-        //     if (isDebug) { console.log("Create Room"); }
-        //     successlog.info(`Create Room: ${room.from}`);
-        //     var roomUuid = "";
-
-        //     // var room_name = listOfRooms.find(r => r.user === room.from).socketId;
-        //     // listOfRooms.find(room => room.users.some(user => user.id === room.from));
-        //     // listOfRooms.find(room => room.users.some(user => user.id === room.from));
-
-        //     var user1 = listOfRooms.filter(room => room.users.some(user => user.id === room.from));
-        //     var user2 = listOfRooms.filter(room => room.users.some(user => user.id === room.to));
-
-        //     let filteredArray = user1.filter(value => user2.includes(value));
-
-        //     // if room not found
-        //     if (Object.keys(filteredArray).length === 0) {
-        //         console.log("create room");
-        //         roomUuid = uuid4();
-        //         roomName = roomUuid;
-        //         var object = {
-        //             room: roomName,
-        //             users: [{id: room.from }, {id: room.to }]
-        //         };
-        //         listOfRooms.push(object);
-        //     } else {
-        //         roomName = filteredArray[0].room;
-        //     }
-
-        //     console.log("room ==> ", listOfRooms);
-
-        //     store.put(roomA, roomUuid);
-        //     store.put(roomB, roomUuid);
-        //     store.put(roomUuid, roomA);
-        //     store.put(roomUuid, roomB);
-            
-            
-            
-        //     socket.join(roomName);
-        // }
-
         const form = new FormData();
         form.append('my_id', room.from);
         form.append('to_id', room.to);
@@ -153,10 +80,6 @@ socketio.on('connect', socket => {
                 conversation.room = roomName;
                 if (isDebug) { console.log(conversation); }
 
-                // if (isDebug) { if (isDebug) { console.log(roomName);
-                // socketio.in(roomName).emit('room', conversation);
-                // socketio.to(roomName).emit('room', conversation);
-                // var socketId = listOfSocket.find(u => u.user === room.from).socketId;
                 socketio.to(socket.id).emit('room', conversation);
 
                 if (isDebug) { console.log('Load all message for : ', socket.id); }
@@ -194,16 +117,6 @@ socketio.on('connect', socket => {
                     conversation.room = room_name;
                     if (isDebug) { console.log(conversation); }
 
-                    // var toSocketId = listOfSocket.find(u => u.user === to);
-                    // if (toSocketId) {
-                    //     toSocketId = listOfSocket.find(u => u.user === to).socketId;
-                    // } else {
-                    //     toSocketId = '';
-                    // }
-
-                    // var fromSocketId = listOfSocket.find(u => u.user === from).socketId;
-
-                    // socketio.to(toSocketId).to(fromSocketId).emit('receive_message', conversation);
 
                     var user1 = listOfRooms.filter(room => room.users.some(user => user.id === from));
                     var user2 = listOfRooms.filter(room => room.users.some(user => user.id === to));
@@ -300,7 +213,7 @@ socketio.on('connect', socket => {
                 conversation.room = roomName;
 
                 // if (isDebug) { console.log(roomName); }
-                // var socketId = listOfSocket.find(u => u.user === room.from).socketId;
+                
                 socketio.to(socket.id).emit('room', conversation);
                 if (isDebug) { console.log('Scrolling by : ', socketId); }
                 successlog.info(`Scrolling by : ${socketId}`);

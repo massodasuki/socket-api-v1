@@ -10,11 +10,17 @@ const store = new Storage('path/to/file');
 var path = require('path');
 var errorlog = require(path.join(__dirname, './utils/logger')).errorlog;
 var successlog = require(path.join(__dirname, './utils/logger')).successlog;
+var telegram = require( path.resolve( __dirname, "./utils/telegram.js" ) );
+
+
+var isDebug = false;
 
 var isDebug = true;
 
 app.get('/', (req, res) => {
     successlog.info(`Node Server is running. Yay!!`);
+    var run = "running";
+    telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Node server : ${run}`);
     res.send("Node Server is running. Yay!!")
 })
 
@@ -23,16 +29,17 @@ var listOfSocket = [{
     user: 'null',
     socketId: 'null'
 }];
+
 socketio.on('connect', socket => {
 
     socket.on('join', (room) => {
-        // console.log(room);
+        if (isDebug) { console.log(room); }
         var roomA = '' + room.from + '-' + room.to + '';
         var roomB = '' + room.to + '-' + room.from + '';
 
-        // console.log( room.from + ' : ' + socket.id);
+        // if (isDebug) { console.log( room.from + ' : ' + socket.id); }
         const index = listOfSocket.findIndex((u) => u.user === room.from)
-        // console.log(index);
+        // if (isDebug) { console.log(index); }
         if (index == -1) {
             var object = {
                 user: room.from,
@@ -45,16 +52,16 @@ socketio.on('connect', socket => {
                 socketId: socket.id
             }
         }
-         if (isDebug) { console.log(listOfSocket); }
+        if (isDebug) { console.log(listOfSocket); }
 
         // store.put(roomA, 'world');
         var roomName = store.get(roomA) ? store.get(roomA) : store.get(roomB);
         if (roomName) {
-            console.log("Join Room");
+            if (isDebug) { console.log("Join Room"); }
             successlog.info(`Join Room: ${room.from}`);
             socket.join(roomName);
         } else {
-            console.log("Create Room");
+            if (isDebug) { console.log("Create Room"); }
             successlog.info(`Create Room: ${room.from}`);
             var roomUuid = uuid4();
             store.put(roomA, roomUuid);
@@ -78,78 +85,118 @@ socketio.on('connect', socket => {
             })
             .then((resolve) => {
                 conversation = resolve.data;
-                 if (isDebug) { console.log(conversation); }
-                conversation.room = roomName;
 
-                // console.log(roomName);
+                conversation.room = roomName;
+                if (isDebug) { console.log(conversation); }
+
+                // if (isDebug) { if (isDebug) { console.log(roomName);
                 // socketio.in(roomName).emit('room', conversation);
                 // socketio.to(roomName).emit('room', conversation);
                 var socketId = listOfSocket.find(u => u.user === room.from).socketId;
                 socketio.to(socketId).emit('room', conversation);
-                 if (isDebug) { console.log('Load all message for : ', socketId); }
+
+                if (isDebug) { console.log('Load all message for : ', socketId); }
                 successlog.info(`Load all message for : ${socketId}`);
             })
             .catch((error) => {
-                 if (isDebug) { console.log(error); }
+                if (isDebug) { console.log(error); }
                 errorlog.error(`Error Message : ${error}`)
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error join : ${error}`);
             });
 
 
     });
 
+    function postSubmitChat (from, to, msg, media1, media_type, room_name) {
+        return new Promise(function(resolve, reject) {
+
+            const form = new FormData();
+            
+            form.append('from', from);
+            form.append('to', to);
+            form.append('msg', msg);
+            form.append('media1', media1);
+            form.append('media_type', media_type);
+
+            axios({
+                    method: 'post',
+                    url: process.env.SUBMIT_CHAT,
+                    headers: form.getHeaders(),
+                    data: form
+                })
+                .then((status) => {
+                    // if (isDebug) { console.log(resolve.data) }
+                    var conversation = status.data;
+                    conversation.room = room_name;
+                    if (isDebug) { console.log(conversation); }
+
+                    var toSocketId = listOfSocket.find(u => u.user === to);
+                    if (toSocketId) {
+                        toSocketId = listOfSocket.find(u => u.user === to).socketId;
+                    } else {
+                        toSocketId = '';
+                    }
+
+                    var fromSocketId = listOfSocket.find(u => u.user === from).socketId;
+                    socketio.to(toSocketId).to(fromSocketId).emit('receive_message', conversation);
+                    successlog.info(`Send message to : ${fromSocketId} and ${toSocketId}`);
+                    return resolve({ ok: 200 });
+
+                })
+                .catch((error) => {
+                    if (isDebug) { console.log('Send Message', error); }
+                    errorlog.error(`Error send_message axios: ${error}`);
+                    telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error postSubmitChat : ${error}`);
+                    return reject({ok: 500,  msg: error});
+              });
+                        
+        })
+    }
+
+
 
     socket.on('send_message', (newMessage) => {
         var roomName = newMessage.room;
+        if (isDebug) { console.log(newMessage.media1); }
+        if(Array.isArray(newMessage.media1)) {
+            var listItem = newMessage.media1;
+            for(let i = 0; i < listItem.length; i++){ 
+                if (isDebug) { console.log(listItem[i].item, listItem[i].type); }
 
-        // if (Array.isArray(newMessage.media1))
-        // {
-        //     loop;
-        // }
-        //  else 
-        // {
-        //   single
-        // }
-        const form = new FormData();
-        // console.log(newMessage);
-        form.append('from', newMessage.from);
-        form.append('to', newMessage.to);
-        form.append('msg', newMessage.msg);
-        form.append('media1', newMessage.media1);
-        form.append('media_type', newMessage.media_type);
-
-        axios({
-                method: 'post',
-                url: process.env.SUBMIT_CHAT,
-                headers: form.getHeaders(),
-                data: form
-            })
-            .then((resolve) => {
-                 if (isDebug) { console.log(resolve.data) }
-                var conversation = resolve.data;
-                conversation.room = roomName;
-
-                var toSocketId = listOfSocket.find(u => u.user === newMessage.to);
-                if (toSocketId) {
-                    toSocketId = listOfSocket.find(u => u.user === newMessage.to).socketId;
-                } else {
-                    toSocketId = '';
+                if (i != 0) {
+                    newMessage.msg = "";
                 }
+                postSubmitChat (newMessage.from, newMessage.to, newMessage.msg, listItem[i].item, listItem[i].type, roomName)
+                    .then((resolve) => {
+                        if (isDebug) { console.log(resolve); }
+                    })
+                    .catch((error) => {
+                        if (isDebug) { console.log(error); }
+                        errorlog.error(`Error Message : ${error}`)
+                        telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error Array.isArray send_message : ${error}`);
+                    });
+            }
 
-                var fromSocketId = listOfSocket.find(u => u.user === newMessage.from).socketId;
-                socketio.to(toSocketId).to(fromSocketId).emit('receive_message', conversation);
-                successlog.info(`Send message to : ${fromSocketId} and ${toSocketId}`);
-
+        } else {
+            postSubmitChat (newMessage.from, newMessage.to, newMessage.msg, newMessage.media1, newMessage.media_type, roomName)
+            .then((resolve) => {
+                if (isDebug) { console.log(resolve); }
             })
-            .catch((error) => { 
-                 if (isDebug) { console.log('Send Message error', error); }
-                errorlog.error(`Error send_message axios: ${error}`);
-          });
+            .catch((error) => {
+                if (isDebug) { console.log(error); }
+                errorlog.error(`Error Message : ${error}`);
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error send_message : ${error}`);
+            });
+
+        }
+
+
     });
 
     socket.on('scroll_max', (room) => {
         var roomName = room.room;
 
-        // console.log(socket.id);
+        // if (isDebug) { console.log(socket.id); }
 
         const form = new FormData();
         form.append('my_id', room.from);
@@ -164,18 +211,20 @@ socketio.on('connect', socket => {
             })
             .then((resolve) => {
                 conversation = resolve.data;
-                // console.log(conversation);
+                // if (isDebug) { console.log(conversation); }
                 conversation.room = roomName;
 
-                // console.log(roomName);
+                // if (isDebug) { console.log(roomName); }
                 var socketId = listOfSocket.find(u => u.user === room.from).socketId;
                 socketio.to(socketId).emit('room', conversation);
-                 if (isDebug) { console.log('Scrolling by : ', socketId); }
+                if (isDebug) { console.log('Scrolling by : ', socketId); }
                 successlog.info(`Scrolling by : ${socketId}`);
             })
-            .catch((error) => {
-                 if (isDebug) { console.log(error); }
+            .catch((error) => { 
+                if (isDebug) { console.log(error); }
+
                 errorlog.error(`Error scroll_max axios : ${error}`);
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error scroll_max : ${error}`);
             });
     })
 
@@ -186,7 +235,9 @@ socketio.on('connect', socket => {
         var roomName = parseInt(room.room);
 
         socket.join(roomName);
-         if (isDebug) { console.log(roomName); }
+        if (isDebug) { console.log(roomName); }
+
+
         const form = new FormData();
         form.append('room', roomName);
         form.append('offset', 0);
@@ -210,56 +261,102 @@ socketio.on('connect', socket => {
                     messageList[index].to = parseInt(messageList[index].to)
                     messageList[index].created_at = parseInt(messageList[index].created_at)
                 }
-                conversation.data = messageList; 
-                         
-                
+                conversation.data = messageList;
+
+
                 conversation.roomName = roomName;
                 conversation.socketId = socket.id;
 
-                 if (isDebug) { console.log(conversation); }
+                if (isDebug) { console.log(conversation); }
                 socketio.to(socket.id).emit('group_room', conversation);
             })
             .catch((error) => {
-                 if (isDebug) { console.log(error); }
+                if (isDebug) { console.log(error); }
                 errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error join_group : ${error}`);
             });
 
     });
+
+
+    function postSubmitGroupChat (from, to, msg, media1, media_type, room_name) {
+        return new Promise(function(resolve, reject) {
+
+            const form = new FormData();
+
+            form.append('from', from);
+            form.append('to', to);
+            form.append('room', room_name);
+            form.append('msg', msg);
+            form.append('media1', media1);
+            form.append('media_type', media_type);
+
+            axios({
+                    method: 'post',
+                    url: process.env.SUBMIT_GROUP_CHAT,
+                    headers: form.getHeaders(),
+                    data: form
+                })
+                .then((resolve) => {
+                    if (isDebug) { console.log(resolve.data); }
+                    console.log(resolve.data);
+                    var conversation = resolve.data;
+                    conversation.room = room_name;
+
+                    socketio.in(room_name).emit('receive_group_message', conversation);
+                    successlog.info(`Send message to : ${room_name}`);
+                })
+                .catch((error) => {
+                    if (isDebug) { console.log(error); }
+                    console.log(error);
+                    errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
+                    telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error postSubmitGroupChat : ${error}`);
+                });
+                        
+        })
+    }
 
     socket.on('send_message_group', (newMessage) => {
         var roomName = parseInt(newMessage.room);
+        if (isDebug) { console.log(newMessage.media1); }
+        if(Array.isArray(newMessage.media1)) {
+            var listItem = newMessage.media1;
+            for(let i = 0; i < listItem.length; i++){ 
+                if (isDebug) { console.log(listItem[i].item, listItem[i].type); }
 
-        const form = new FormData();
-         if (isDebug) { console.log(newMessage); }
-        form.append('from', newMessage.from);
-        form.append('to', newMessage.to);
-        form.append('room', roomName);
-        form.append('msg', newMessage.msg);
-        form.append('media1', newMessage.media1);
-        form.append('media_type', newMessage.media_type);
 
-        axios({
-                method: 'post',
-                url: process.env.SUBMIT_GROUP_CHAT,
-                headers: form.getHeaders(),
-                data: form
-            })
+                if (i != 0) {
+                    newMessage.msg = "";
+                }
+                postSubmitGroupChat (newMessage.from, newMessage.to, newMessage.msg, listItem[i].item, listItem[i].type, roomName)
+                    .then((resolve) => {
+                        if (isDebug) { console.log(resolve); }
+                    })
+                    .catch((error) => {
+                        if (isDebug) { console.log(error); }
+                        errorlog.error(`Error Message : ${error}`)
+                        telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error Array.isArray postSubmitGroupChat loop : ${error}`);
+                    });
+            }
+
+        } else {
+            postSubmitGroupChat (newMessage.from, newMessage.to, newMessage.msg, newMessage.media1, newMessage.media_type, roomName)
             .then((resolve) => {
-                 if (isDebug) { console.log(resolve.data); }
-                var conversation = resolve.data;
-                conversation.room = roomName;
-
-                socketio.in(roomName).emit('receive_group_message', conversation);
-                successlog.info(`Send message to : ${roomName}`);
+                if (isDebug) { console.log(resolve); }
             })
             .catch((error) => {
-                 if (isDebug) { console.log(error); }
-                errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
+
+                if (isDebug) { console.log(error); }
+                console.log(error);
+                errorlog.error(`Error Message : ${error}`)
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error send_message_group postSubmitGroupChat : ${error}`);
             });
+
+        }
     });
 
     socket.on('scroll_max_group', (room) => {
-        // console.log(room);
+        // if (isDebug) { console.log(room); }
         var roomName = parseInt(room.room);
         var socketId;
 
@@ -283,7 +380,7 @@ socketio.on('connect', socket => {
             })
             .then((resolve) => {
                 conversation = resolve.data;
-                
+
                 conversation.roomName = roomName;
                 conversation.socketId = socketId;
 
@@ -299,12 +396,14 @@ socketio.on('connect', socket => {
                 }
                 conversation.data = messageList;
 
-                 if (isDebug) { console.log(conversation); }
+                if (isDebug) { console.log(conversation); }
                 socketio.to(socketId).emit('group_room', conversation);
             })
             .catch((error) => {
-                 if (isDebug) { console.log(error); }
+                if (isDebug) { console.log(error); }
+
                 errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
+                telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error scroll_max_group : ${error}`);
             });
 
     })
@@ -314,7 +413,7 @@ socketio.on('connect', socket => {
 
         if (userId) {
             var userId = listOfSocket.find(u => u.socketId === socket.id).user;
-            console.log('disconnecting ' + userId);
+            if (isDebug) { console.log('disconnecting ' + userId); }
             successlog.info(`disconnecting: ${userId}`);
         }
 
@@ -325,7 +424,7 @@ socketio.on('connect', socket => {
 
         if (userId) {
             var userId = listOfSocket.find(u => u.socketId === socket.id).user;
-            console.log('disconnect ' + userId);
+            if (isDebug) { console.log('disconnect ' + userId); }
             successlog.info(`disconnect: ${userId}`);
         }
     });
@@ -343,7 +442,8 @@ const logger = winston.createLogger({
 process.on('uncaughtException', err => {
     logger.error('There was an uncaught exception: ', err);
     console.error(err && err.stack);
-    console.log('Continue Listening')
+    telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error uncaughtException : ${err}`);
+    console.log('Continue Listening');
     //logger.on('finish', () => process.exit());
     logger.end();
 });

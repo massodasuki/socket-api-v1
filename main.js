@@ -12,7 +12,7 @@ var errorlog = require(path.join(__dirname, './utils/logger')).errorlog;
 var successlog = require(path.join(__dirname, './utils/logger')).successlog;
 var telegram = require( path.resolve( __dirname, "./utils/telegram.js" ) );
 
-var isDebug = true;
+var isDebug = false;
 
 app.get('/', (req, res) => {
     successlog.info(`Node Server is running. Yay!!`);
@@ -213,7 +213,7 @@ socketio.on('connect', socket => {
                 conversation.room = roomName;
 
                 // if (isDebug) { console.log(roomName); }
-                
+
                 socketio.to(socket.id).emit('room', conversation);
                 if (isDebug) { console.log('Scrolling by : ', socketId); }
                 successlog.info(`Scrolling by : ${socketId}`);

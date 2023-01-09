@@ -15,6 +15,8 @@ var telegram = require( path.resolve( __dirname, "./utils/telegram.js" ) );
 
 var isDebug = false;
 
+var isDebug = true;
+
 app.get('/', (req, res) => {
     successlog.info(`Node Server is running. Yay!!`);
     var run = "running";
@@ -83,6 +85,7 @@ socketio.on('connect', socket => {
             })
             .then((resolve) => {
                 conversation = resolve.data;
+
                 conversation.room = roomName;
                 if (isDebug) { console.log(conversation); }
 
@@ -91,6 +94,7 @@ socketio.on('connect', socket => {
                 // socketio.to(roomName).emit('room', conversation);
                 var socketId = listOfSocket.find(u => u.user === room.from).socketId;
                 socketio.to(socketId).emit('room', conversation);
+
                 if (isDebug) { console.log('Load all message for : ', socketId); }
                 successlog.info(`Load all message for : ${socketId}`);
             })
@@ -153,7 +157,6 @@ socketio.on('connect', socket => {
 
     socket.on('send_message', (newMessage) => {
         var roomName = newMessage.room;
-
         if (isDebug) { console.log(newMessage.media1); }
         if(Array.isArray(newMessage.media1)) {
             var listItem = newMessage.media1;
@@ -187,6 +190,7 @@ socketio.on('connect', socket => {
 
         }
 
+
     });
 
     socket.on('scroll_max', (room) => {
@@ -218,6 +222,7 @@ socketio.on('connect', socket => {
             })
             .catch((error) => { 
                 if (isDebug) { console.log(error); }
+
                 errorlog.error(`Error scroll_max axios : ${error}`);
                 telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error scroll_max : ${error}`);
             });
@@ -231,6 +236,7 @@ socketio.on('connect', socket => {
 
         socket.join(roomName);
         if (isDebug) { console.log(roomName); }
+
 
         const form = new FormData();
         form.append('room', roomName);
@@ -312,13 +318,12 @@ socketio.on('connect', socket => {
 
     socket.on('send_message_group', (newMessage) => {
         var roomName = parseInt(newMessage.room);
-
-
         if (isDebug) { console.log(newMessage.media1); }
         if(Array.isArray(newMessage.media1)) {
             var listItem = newMessage.media1;
             for(let i = 0; i < listItem.length; i++){ 
                 if (isDebug) { console.log(listItem[i].item, listItem[i].type); }
+
 
                 if (i != 0) {
                     newMessage.msg = "";
@@ -340,6 +345,7 @@ socketio.on('connect', socket => {
                 if (isDebug) { console.log(resolve); }
             })
             .catch((error) => {
+
                 if (isDebug) { console.log(error); }
                 console.log(error);
                 errorlog.error(`Error Message : ${error}`)
@@ -395,6 +401,7 @@ socketio.on('connect', socket => {
             })
             .catch((error) => {
                 if (isDebug) { console.log(error); }
+
                 errorlog.error(`Error join_group axios GROUP_OPEN_CHAT : ${error}`);
                 telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error scroll_max_group : ${error}`);
             });

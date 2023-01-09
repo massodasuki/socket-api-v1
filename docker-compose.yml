@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  app:
+    container_name: app
+    restart: always
+    build: .
+    env_file: .env
+    environment:
+      - PORT=${PORT}
+      - OPEN_CHAT=${OPEN_CHAT}
+      - SUBMIT_CHAT=${SUBMIT_CHAT}
+      - GROUP_OPEN_CHAT=${GROUP_OPEN_CHAT}
+      - SUBMIT_GROUP_CHAT=${SUBMIT_GROUP_CHAT}
+    ports:
+      - 3000:3000

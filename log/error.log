@@ -1,0 +1,36 @@
+{
+  message: 'Error join_group axios GROUP_OPEN_CHAT : AxiosError: Request failed with status code 500',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-10-21T17:47:15.389Z'
+}
+{
+  message: 'Error join_group axios GROUP_OPEN_CHAT : AxiosError: Request failed with status code 404',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:17:56.889Z'
+}
+{
+  message: 'Error join_group axios GROUP_OPEN_CHAT : AxiosError: Request failed with status code 404',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:17:57.958Z'
+}
+{
+  message: 'Error join_group axios GROUP_OPEN_CHAT : AxiosError: Request failed with status code 404',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:18:56.221Z'
+}
+{
+  message: 'Error join_group axios GROUP_OPEN_CHAT : AxiosError: Request failed with status code 404',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:18:56.669Z'
+}
+{
+  message: "Error Message : Error: Cannot read property 'replace' of null",
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2022-10-27T15:25:31.604Z'
+}

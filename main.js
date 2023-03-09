@@ -31,7 +31,7 @@ var listOfRooms = [{
 socketio.on('connect', socket => {
 
     socket.on('join', (room) => {
-        
+
         if (isDebug) { console.log(room); }
 
         // find room between two user
@@ -98,7 +98,7 @@ socketio.on('connect', socket => {
         return new Promise(function(resolve, reject) {
 
             const form = new FormData();
-            
+
             form.append('from', from);
             form.append('to', to);
             form.append('msg', msg);
@@ -145,7 +145,7 @@ socketio.on('connect', socket => {
                     telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error postSubmitChat : ${error}`);
                     return reject({ok: 500,  msg: error});
               });
-                        
+
         })
     }
 
@@ -154,11 +154,11 @@ socketio.on('connect', socket => {
     socket.on('send_message', (newMessage) => {
         var roomName = newMessage.room;
 
-        
+
         if (isDebug) { console.log(newMessage.media1); }
         if(Array.isArray(newMessage.media1)) {
             var listItem = newMessage.media1;
-            for(let i = 0; i < listItem.length; i++){ 
+            for(let i = 0; i < listItem.length; i++){
                 if (isDebug) { console.log(listItem[i].item, listItem[i].type); }
 
                 if (i != 0) {
@@ -218,7 +218,7 @@ socketio.on('connect', socket => {
                 if (isDebug) { console.log('Scrolling by : ', socket.id); }
                 successlog.info(`Scrolling by : ${socket.id}`);
             })
-            .catch((error) => { 
+            .catch((error) => {
                 if (isDebug) { console.log(error); }
 
                 errorlog.error(`Error scroll_max axios : ${error}`);
@@ -231,12 +231,14 @@ socketio.on('connect', socket => {
 
     socket.on('join_group', (room) => {
         var roomName = parseInt(room.room);
+        var my_id = room.my_id;
 
         socket.join(roomName);
         if (isDebug) { console.log(roomName); }
 
 
         const form = new FormData();
+        form.append('my_id',  my_id);
         form.append('room', roomName);
         form.append('offset', 0);
 
@@ -310,7 +312,7 @@ socketio.on('connect', socket => {
                     errorlog.error(`Error send_message_group axios SUBMIT_GROUP_CHAT : ${error}`);
                     telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Error postSubmitGroupChat : ${error}`);
                 });
-                        
+
         })
     }
 
@@ -319,7 +321,7 @@ socketio.on('connect', socket => {
         if (isDebug) { console.log(newMessage.media1); }
         if(Array.isArray(newMessage.media1)) {
             var listItem = newMessage.media1;
-            for(let i = 0; i < listItem.length; i++){ 
+            for(let i = 0; i < listItem.length; i++){
                 if (isDebug) { console.log(listItem[i].item, listItem[i].type); }
 
 
@@ -356,6 +358,7 @@ socketio.on('connect', socket => {
     socket.on('scroll_max_group', (room) => {
         // if (isDebug) { console.log(room); }
         var roomName = parseInt(room.room);
+        var my_id = room.my_id;
         var socketId;
 
         if (room.socket_id && room.socket_id != '') {
@@ -367,6 +370,7 @@ socketio.on('connect', socket => {
         socket.join(roomName);
 
         const form = new FormData();
+        form.append('my_id', my_id);
         form.append('room', roomName);
         form.append('offset', room.offset);
 
@@ -409,15 +413,15 @@ socketio.on('connect', socket => {
     socket.on("disconnecting", () => {
         if (isDebug) { console.log('disconnecting ' + socket.id); }
         successlog.info(`disconnecting: ${socket.id}`);
-        
+
 
     });
 
     socket.on("disconnect", () => {
-        
+
         if (isDebug) { console.log('disconnect ' + socket.id); }
         successlog.info(`disconnect: ${socket.id}`);
-        
+
     });
 
 });

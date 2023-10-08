@@ -11,8 +11,11 @@ var path = require('path');
 var errorlog = require(path.join(__dirname, './utils/logger')).errorlog;
 var successlog = require(path.join(__dirname, './utils/logger')).successlog;
 var telegram = require( path.resolve( __dirname, "./utils/telegram.js" ) );
+const cron = require('node-cron');
 
 var isDebug = false;
+
+// telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Server Started`);
 
 app.get('/', (req, res) => {
     successlog.info(`Node Server is running. Yay!!`);
@@ -443,5 +446,23 @@ process.on('uncaughtException', err => {
     logger.end();
 });
 
-http.listen(process.env.PORT)
-// http.listen(3000)
+
+// Your task to be executed
+const memoryCheckTask = () => {
+  const used = process.memoryUsage();
+    const memoryUsage = process.memoryUsage();
+    const totalHeapSize = memoryUsage.heapTotal;
+    const usedHeapSize = memoryUsage.heapUsed;
+    const heapPercentage = (usedHeapSize / totalHeapSize) * 100;
+    
+    console.log(`Heap Memory Usage: ${heapPercentage.toFixed(2)}%`);
+    telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Heap Memory Usage: ${heapPercentage.toFixed(2)}%`);
+    console.log('Scheduled task at 11 PM');
+      
+};
+
+// Schedule the task to run every day at 11 PM
+// cron.schedule('0 23 * * *', memoryCheckTask);
+cron.schedule('* * * * *', memoryCheckTask);
+// http.listen(process.env.PORT)
+http.listen(3000)

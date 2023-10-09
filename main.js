@@ -462,7 +462,6 @@ const memoryCheckTask = () => {
 };
 
 // Schedule the task to run every day at 11 PM
-// cron.schedule('0 23 * * *', memoryCheckTask);
-cron.schedule('* * * * *', memoryCheckTask);
-// http.listen(process.env.PORT)
-http.listen(3000)
+cron.schedule('0 23 * * *', memoryCheckTask);
+http.listen(process.env.PORT)
+// http.listen(3000)

@@ -15,7 +15,7 @@ const cron = require('node-cron');
 
 var isDebug = false;
 
-// telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Server Started`);
+telegram.sendMessageTL(process.env.TL_TOKEN, process.env.TL_CHAT_ID, `Server Started`);
 
 app.get('/', (req, res) => {
     successlog.info(`Node Server is running. Yay!!`);

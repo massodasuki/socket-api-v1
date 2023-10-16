@@ -5,6 +5,7 @@ module.exports = {
     autorestart: true,
     cron_restart: '0 21 * * *', // Cron schedule 5 am Malaysia time
     exec_mode: 'cluster',
-    watch: '.'
+    watch: '.',
+    "node_args": ["--max-old-space-size=2048"]
   }]
 };
